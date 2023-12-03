@@ -1,0 +1,36 @@
+.menuButtonWrapper {
+  width: 160px;
+  height: 160px;
+  border: white 6px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+
+  .menuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+  }
+}
+
+.menuButton:hover {
+  background-color: cornflowerblue;
+  color: white;
+  transition: 500ms ease-in-out;
+}
+
+.menuButtonWrapper:hover {
+  border-color: cornflowerblue;
+  transition: 500ms ease-in-out;
+}

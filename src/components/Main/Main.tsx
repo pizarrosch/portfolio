@@ -1,4 +1,5 @@
 import s from './Main.module.scss';
+import MenuButton from "@/components/MenuButton/MenuButton";
 
 export default function Main() {
     return (
@@ -11,6 +12,7 @@ export default function Main() {
                     start right away!"
                 </p>
             </div>
+            <MenuButton />
         </div>
     )
 }
