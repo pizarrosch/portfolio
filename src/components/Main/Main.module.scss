@@ -1,5 +1,16 @@
 .root {
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 200px);
   background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .greetingsTitle {
+    font-size: 30px;
+  }
+
+  .greetingsParagraph {
+    font-size: 24px;
+  }
 }
