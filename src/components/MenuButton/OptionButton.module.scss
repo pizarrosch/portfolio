@@ -1,0 +1,32 @@
+.optionButtonContainer {
+  position: relative;
+
+  .optionButton,
+  .aboutMeButton
+  {
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .aboutMeButton {
+    background-color: white;
+    z-index: 0;
+  }
+
+  .roundBottomDiv {
+    position: absolute;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color: #eeeeee;
+    width: 80px;
+    height: 8px;
+    z-index: 1;
+    bottom: 0;
+  }
+}
