@@ -7,7 +7,18 @@ export default function MenuButton() {
             <div className={s.menuButtonWrapper}>
                 <div className={s.menuButton}>Menu</div>
             </div>
-            <OptionButton />
+            <div className={s.aboutMeButtonWrapper}>
+                <OptionButton value='About me'/>
+            </div>
+            <div className={s.projectsButtonWrapper}>
+                <OptionButton value='Projects'/>
+            </div>
+            <div className={s.skillsButtonWrapper}>
+                <OptionButton value='Skills'/>
+            </div>
+            <div className={s.contactButtonWrapper}>
+                <OptionButton value='Contact'/>
+            </div>
         </div>
     )
 }

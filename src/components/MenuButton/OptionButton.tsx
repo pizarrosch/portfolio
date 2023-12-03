@@ -1,9 +1,13 @@
 import s from "./OptionButton.module.scss";
 
-export default function OptionButton () {
+type TValue = {
+    value: string;
+}
+
+export default function OptionButton ({value}: TValue) {
     return (
         <div className={s.optionButtonContainer}>
-            <div className={s.aboutMeButton}>About me</div>
+            <div className={s.optionButton}>{value}</div>
             <div className={s.roundBottomDiv}></div>
         </div>
     )

@@ -27,6 +27,34 @@
     }
   }
 
+  .aboutMeButtonWrapper {
+    position: absolute;
+    top: 0;
+    left: -65px;
+    rotate: -50deg;
+  }
+
+  .skillsButtonWrapper {
+    position: absolute;
+    top: 0;
+    right: -65px;
+    rotate: 50deg;
+  }
+
+  .projectsButtonWrapper {
+    position: absolute;
+    bottom: 0;
+    left: -65px;
+    rotate: -130deg;
+  }
+
+  .contactButtonWrapper {
+    position: absolute;
+    bottom: 0;
+    right: -65px;
+    rotate: 130deg;
+  }
+
   .menuButton:hover {
     background-color: cornflowerblue;
     color: white;
