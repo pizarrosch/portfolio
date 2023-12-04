@@ -20,26 +20,6 @@ export default function MenuButton() {
                     Menu
                 </div>
             </div>
-            {displayStatus &&
-              <div className={s.aboutMeButtonWrapper}>
-                <OptionButton value='About me'/>
-              </div>
-            }
-            {displayStatus &&
-              <div className={s.projectsButtonWrapper}>
-                <OptionButton value='Projects'/>
-              </div>
-            }
-            {displayStatus &&
-              <div className={s.skillsButtonWrapper}>
-                <OptionButton value='Skills'/>
-              </div>
-            }
-            {displayStatus &&
-              <div className={s.contactButtonWrapper}>
-                <OptionButton value='Contact'/>
-              </div>
-            }
         </div>
     )
 }
