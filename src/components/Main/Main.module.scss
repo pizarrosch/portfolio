@@ -3,14 +3,16 @@
   height: calc(100vh - 200px);
   background-color: #eeeeee;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  text-align: center;
 
   .greetingsTitle {
-    font-size: 30px;
+    font-size: 60px;
   }
 
   .greetingsParagraph {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
