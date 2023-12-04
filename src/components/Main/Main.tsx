@@ -9,7 +9,7 @@ export default function Main() {
                 <p className={s.greetingsParagraph}>
                     I am a new born frontend developer, who wants to put the whole energy into new profession.<br/>
                     If you need someone with the good knowledge of React, Next.js and Typescript, I am glad to
-                    start right away!"
+                    start right away!
                 </p>
             </div>
             <MenuButton />
