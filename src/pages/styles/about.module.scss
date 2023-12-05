@@ -14,4 +14,13 @@
     width: auto;
     border-radius: 50%;
   }
+
+  .skillsContainer {
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 40px;
+    justify-content: center;
+  }
 }

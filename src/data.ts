@@ -1,0 +1,1 @@
+export const SKILLS = ['HTML', 'CSS', 'SASS/SCSS', 'JavaScript', 'React', 'Typescript', 'nextJS', 'SQL Basics', 'Express basics'];
