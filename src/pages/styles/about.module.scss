@@ -3,24 +3,42 @@
   height: calc(100vh - 200px);
   background-color: #eeeeee;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 30px;
   box-sizing: border-box;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 200;
+
+  .aboutMeWrapper,
+  .skillsWrapper
+  {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      font-size: 40px;
+      font-weight: 500;
+    }
+  }
 
   .profileImage {
-    height: 70%;
+    height: 50%;
     width: auto;
     border-radius: 50%;
   }
 
-  .skillsContainer {
-    display: flex;
-    width: 400px;
-    flex-wrap: wrap;
+  .skillsWrapper {
     gap: 20px;
-    row-gap: 40px;
-    justify-content: center;
+    margin-top: -110px;
+
+    .skillsContainer {
+      display: flex;
+      width: 570px;
+      flex-wrap: wrap;
+      gap: 20px;
+      row-gap: 20px;
+      justify-content: center;
+    }
   }
 }

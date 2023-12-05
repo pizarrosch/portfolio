@@ -1,1 +1,1 @@
-export const SKILLS = ['HTML', 'CSS', 'SASS/SCSS', 'JavaScript', 'React', 'Typescript', 'nextJS', 'SQL Basics', 'Express basics'];
+export const SKILLS = ['HTML/CSS', 'SASS/SCSS', 'Typescript', 'JavaScript', 'Webstorm', 'React', 'NextJS', 'NodeJS', 'Redux', 'GitHub', 'Webpack', 'Express', 'jQuery', 'Cypress', 'Linux', 'Bash', 'SQL', 'npm', 'git',  'ssh',  'jest'];
