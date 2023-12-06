@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  //align-items: center;
+  //justify-content: center;
+  width: 1200px;
+  gap: 50px;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .pjImage {
+    border: 4px #8fabe8 solid;
+    border-radius: 8px;
+  }
+
+  .description {
+    font-size: 20px;
+    font-weight: 200;
+  }
+}

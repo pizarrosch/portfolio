@@ -11,7 +11,7 @@ export default function Header() {
                 <Link href='/about'>
                     <div>About</div>
                 </Link>
-                <Link href='/'>
+                <Link href='/projects'>
                     <div>Projects</div>
                 </Link>
                 <Link href='/'>

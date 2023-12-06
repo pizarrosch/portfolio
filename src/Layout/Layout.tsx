@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from "next/link";
 import {PropsWithChildren} from "react";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
