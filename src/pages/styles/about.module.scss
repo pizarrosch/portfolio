@@ -8,18 +8,26 @@
   padding: 0 30px;
   box-sizing: border-box;
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 300;
 
   .aboutMeWrapper,
-  .skillsWrapper
-  {
+  .skillsWrapper {
     display: flex;
     flex-direction: column;
+    margin: -70px 0;
 
     > span {
       font-size: 40px;
       font-weight: 500;
     }
+  }
+
+  .skillsWrapper > span {
+    margin-left: 35px;
+  }
+
+  .langSkillsContainer {
+    margin-left: -15px;
   }
 
   .profileImage {
@@ -32,7 +40,8 @@
     gap: 20px;
     margin-top: -110px;
 
-    .skillsContainer {
+    .skillsContainer,
+    .langSkillsContainer {
       display: flex;
       width: 570px;
       flex-wrap: wrap;
