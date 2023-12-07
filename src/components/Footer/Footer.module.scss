@@ -9,8 +9,22 @@
   gap: 25px;
   box-sizing: border-box;
 
-  .image {
-    width: 40px;
-    height: 40px;
+  .image,
+  .x_ixon
+  {
+    width: 32px;
+    height: 32px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .x_ixon {
+    background-color: black;
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 50%;
   }
 }
+

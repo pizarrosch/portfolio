@@ -1,10 +1,10 @@
 import s from './Footer.module.scss';
 import Image from "next/image";
-import linkedIn from '../../../public/assets/linkedin.svg';
-import gitHub from '../../../public/assets/github-mark.svg';
-import X from '../../../public/assets/x-social-media-logo-icon.svg';
-import facebook from '../../../public/assets/2021_Facebook_icon.svg.png';
-import instagram from '../../../public/assets/Instagram_logo_2022.svg.png';
+import linkedIn from '../../../public/assets/black_icons/linkedin.svg';
+import gitHub from '../../../public/assets/black_icons/github.svg';
+import X from '../../../public/assets/black_icons/social-icon-white-x.svg';
+import facebook from '../../../public/assets/black_icons/facebook.svg';
+import instagram from '../../../public/assets/black_icons/instagram.svg';
 import Link from "next/link";
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
                 <Image className={s.image} src={gitHub} alt='' />
             </Link>
             <Link href='https://twitter.com/zshomakhov' title='X(former Twitter)' target='_blank'>
-                <Image className={s.image} src={X} alt='' />
+                <Image className={s.x_ixon} src={X} alt='' />
             </Link>
             <Link href='https://www.linkedin.com/in/zaur-shomakhov-13a106122/' title='linkedIn' target='_blank'>
                 <Image className={s.image} src={linkedIn} alt='' />

@@ -1,7 +1,6 @@
 .root {
   display: flex;
-  //align-items: center;
-  //justify-content: center;
+  align-items: center;
   width: 1200px;
   gap: 50px;
 
@@ -10,7 +9,7 @@
   }
 
   .pjImage {
-    border: 4px #8fabe8 solid;
+    border: 2px #8fabe8 solid;
     border-radius: 8px;
   }
 
