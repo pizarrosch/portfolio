@@ -1,51 +1,29 @@
 .root {
-  display: flex;
-  justify-content: space-between;
   background-color: #eeeeee;
   align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  gap: 25px;
+  height: 100px;
+  justify-content: flex-end;
+  padding-right: 30px;
+  width: 100%;
 
-  .switcherContainer {
-    display: flex;
-    align-items: center;
-    width: 250px;
-    gap: 10px;
-    padding-left: 30px;
-    box-sizing: border-box;
+  .image,
+  .x_ixon {
+    height: 32px;
+    width: 32px;
 
-    .switchCircleWrapper {
-      width: 70px;
-      height: 25px;
-      border: 1px #5d5d5d solid;
-      border-radius: 10px;
+    &:hover {
+      opacity: 0.6;
     }
   }
 
-  .iconsContainer {
-    align-items: center;
+  .x_ixon {
+    background-color: black;
+    border-radius: 50%;
     box-sizing: border-box;
-    display: flex;
-    gap: 25px;
-    height: 100px;
-    justify-content: flex-end;
-    padding-right: 30px;
-    width: 100%;
-
-    .image,
-    .x_ixon {
-      height: 32px;
-      width: 32px;
-
-      &:hover {
-        opacity: 0.6;
-      }
-    }
-
-    .x_ixon {
-      background-color: black;
-      border-radius: 50%;
-      box-sizing: border-box;
-      padding: 6px;
-    }
+    padding: 6px;
   }
 }
 

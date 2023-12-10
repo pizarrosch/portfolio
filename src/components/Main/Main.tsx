@@ -7,6 +7,7 @@ export default function Main() {
 
   const activationStatus = useAppSelector((state: RootState) => state.activationsStatus);
   const dispatch = useAppDispatch();
+
     // @ts-ignore
     return (
         <div className={s.root}>

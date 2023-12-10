@@ -1,0 +1,17 @@
+.switcherContainer {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  gap: 10px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 35px;
+
+  .switchCircleWrapper {
+    width: 70px;
+    height: 25px;
+    border: 1px #5d5d5d solid;
+    border-radius: 10px;
+  }
+}
