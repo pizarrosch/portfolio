@@ -1,29 +1,52 @@
 .root {
-  align-items: center;
-  background-color: #eeeeee;
-  box-sizing: border-box;
   display: flex;
-  gap: 25px;
-  height: 100px;
-  justify-content: flex-end;
-  padding-right: 30px;
-  width: 100%;
+  justify-content: space-between;
+  background-color: #eeeeee;
+  align-items: center;
 
-  .image,
-  .x_ixon {
-    height: 32px;
-    width: 32px;
+  .switcherContainer {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    gap: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
 
-    &:hover {
-      opacity: 0.6;
+    .switchCircleWrapper {
+      width: 70px;
+      height: 25px;
+      border: 1px #5d5d5d solid;
+      border-radius: 10px;
     }
   }
 
-  .x_ixon {
-    background-color: black;
-    border-radius: 50%;
+  .iconsContainer {
+    align-items: center;
     box-sizing: border-box;
-    padding: 6px;
+    display: flex;
+    gap: 25px;
+    height: 100px;
+    justify-content: flex-end;
+    padding-right: 30px;
+    width: 100%;
+
+    .image,
+    .x_ixon {
+      height: 32px;
+      width: 32px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .x_ixon {
+      background-color: black;
+      border-radius: 50%;
+      box-sizing: border-box;
+      padding: 6px;
+    }
   }
 }
+
 
