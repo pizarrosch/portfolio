@@ -1,10 +1,18 @@
 import s from './Main.module.scss';
 import ParticlesComponent from "@/components/Particles/Particles";
-
+import {activate} from "@/redux/slices/activateAnimationSlice";
+import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
+import {RootState} from "@/redux/store";
 export default function Main() {
+
+  const activationStatus = useAppSelector((state: RootState) => state.activationsStatus);
+  const dispatch = useAppDispatch();
     // @ts-ignore
     return (
         <div className={s.root}>
+          <div onClick={() => {
+            return activationStatus.active ? dispatch(activate(false)) : dispatch(activate(true));
+          }}>{activationStatus.active ? 'Turn off animation' : 'Turn on animation'}</div>
             <div style={{position: "absolute"}} className={s.background}>
                 <ParticlesComponent/>
             </div>

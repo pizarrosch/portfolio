@@ -2,7 +2,6 @@ import s from './MenuButton.module.scss';
 import OptionButton from "@/components/MenuButton/OptionButton";
 import {useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
-import {show} from "@/redux/slices/showStatusSlice";
 import {useState} from "react";
 
 export default function MenuButton() {

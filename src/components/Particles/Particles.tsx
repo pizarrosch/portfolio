@@ -1,10 +1,14 @@
 import Particles, {initParticlesEngine} from "@tsparticles/react";
 import {loadFull} from "tsparticles";
 import React, {useEffect, useState} from "react";
+import {useAppSelector} from "@/hooks/hooks";
+import {RootState} from "@/redux/store";
 
 const ParticlesComponent = () => {
 
     const [ init, setInit ] = useState(false);
+
+    const activationStatus = useAppSelector((state: RootState) => state.activationsStatus);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -32,11 +36,11 @@ const ParticlesComponent = () => {
             interactivity: {
                 events: {
                     onClick: {
-                        enable: true,
+                        enable: activationStatus.active,
                         mode: "push",
                     },
                     onHover: {
-                        enable: true,
+                        enable: activationStatus.active,
                         mode: "repulse",
                     },
                 },
@@ -63,7 +67,7 @@ const ParticlesComponent = () => {
                 },
                 move: {
                     direction: "none",
-                    enable: true,
+                    enable: activationStatus.active,
                     outModes: {
                         default: "bounce",
                     },
@@ -75,7 +79,7 @@ const ParticlesComponent = () => {
                     density: {
                         enable: true,
                     },
-                    value: 120,
+                    value: 150,
                 },
                 opacity: {
                     value: 0.5,

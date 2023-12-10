@@ -10,13 +10,13 @@ import {
     REGISTER
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import {showStatusSlice} from "@/redux/slices/showStatusSlice";
+import {activateAnimationSlice} from "@/redux/slices/activateAnimationSlice";
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
 const reducer = combineReducers({
-    showStatus: showStatusSlice.reducer,
+    activationsStatus: activateAnimationSlice.reducer,
 })
 
 const persistConfig = {
