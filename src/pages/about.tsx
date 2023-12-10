@@ -40,9 +40,9 @@ export default function About() {
                     <div className={s.wrapper}>
                         <span className={s.title}>My skills:</span>
                         <div className={s.skillsContainer}>
-                            {SKILLS.map((skill: string) => {
+                            {SKILLS.map((skill: string, id: number) => {
                                 return (
-                                    <Skills skill={skill}/>
+                                    <Skills skill={skill} key={id}/>
                                 )
                             })}
                         </div>

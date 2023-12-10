@@ -1,10 +1,10 @@
 import s from './Skills.module.scss';
 
-type TSkill = {
-    skill: string;
+export type Props = {
+  skill: string;
 }
 
-export default function Skills({skill}: TSkill) {
+export default function Skills({skill}: Props) {
     return (
         <div className={s.root}>
             {skill}

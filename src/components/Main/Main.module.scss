@@ -1,12 +1,23 @@
 .root {
   width: 100%;
   height: calc(100vh - 200px);
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #989898;
+  position: relative;
+  overflow: hidden;
+
+  .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 
   .greetingsTitle {
     font-size: 40px;
@@ -15,6 +26,7 @@
 
   .greetingsParagraph {
     font-size: 28px;
-    font-weight: 200;
+    font-weight: 300;
+    //text-shadow: #FC0 1px 0 10px;
   }
 }

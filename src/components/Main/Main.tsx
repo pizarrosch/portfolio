@@ -1,8 +1,13 @@
 import s from './Main.module.scss';
+import ParticlesComponent from "@/components/Particles/Particles";
 
 export default function Main() {
+    // @ts-ignore
     return (
         <div className={s.root}>
+            <div style={{position: "absolute"}} className={s.background}>
+                <ParticlesComponent/>
+            </div>
             <div className={s.greetingsTitle}>Hi! My name is Zaur Shomakhov</div>
             <p className={s.greetingsParagraph}>
                 I am a new born frontend developer, who wants to put the whole energy into new profession.<br/>
