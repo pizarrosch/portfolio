@@ -28,21 +28,20 @@
       height: 30px;
       border-radius: 50%;
       background-color: #5d5d5d;
+      bottom: -2.5px;
     }
 
     .switcherOff {
-      bottom: -3px;
-      left: -2px;
+      left: -2.5px;
     }
 
     .switcherOn {
-      bottom: -3px;
-      right: -2px;
+      right: -2.5px;
     }
   }
 
   .switchCircleWrapperOff {
-    background-color: #e55b5b;
+    background-color: #b4b4b4;
   }
 
   .switchCircleWrapperOn {
