@@ -15,16 +15,22 @@ export default function Projects() {
   const [slideIndex, setSlideIndex] = useState(0);
 
   function onRightClick() {
+    if (slideIndex === pjItemsData.length - 1) return;
     setSlideIndex(prev => prev + 1);
+  }
+
+  function onLeftClick() {
+    if (slideIndex < 1) return;
+    setSlideIndex(prev => prev - 1);
   }
 
   return (
     <Layout>
       <div className={s.root}>
-        <Image src={leftArrow} alt='' width={64} height={64} className={s.arrowLeftInactive} />
+        <Image src={leftArrow} alt='' width={64} height={64} className={slideIndex > 0 ? s.arrowLeftActive : s.arrowLeftInactive} onClick={onLeftClick}/>
         <ProjectItem src={pjItemsData[slideIndex].src} title={pjItemsData[slideIndex].title}
                      description={pjItemsData[slideIndex].description}/>
-        <Image src={leftArrow} alt='' width={64} height={64} className={s.arrowRightActive} onClick={onRightClick}/>
+        <Image src={leftArrow} alt='' width={64} height={64} className={slideIndex === pjItemsData.length - 1 ? s.arrowRightInactive : s.arrowRightActive} onClick={onRightClick}/>
       </div>
     </Layout>
   )
