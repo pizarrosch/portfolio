@@ -1,6 +1,5 @@
 .root {
   display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: calc(100vh - 200px);
   background-color: white;
@@ -10,4 +9,23 @@
   padding-top: 100px;
   padding-bottom: 100px;
   box-sizing: border-box;
+
+  .arrowRight,
+  .arrowRightInactive,
+  .arrowRightActive
+  {
+    transform: rotate(180deg);
+  }
+
+  .arrowLeftInactive,
+  .arrowRightInactive {
+    opacity: 20%;
+    cursor: pointer;
+  }
+
+  .arrowLeftActive,
+  .arrowRightActive {
+    opacity: 100%;
+    cursor: pointer;
+  }
 }
