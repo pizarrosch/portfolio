@@ -21,11 +21,20 @@
   .arrowRightInactive {
     opacity: 20%;
     cursor: pointer;
+    padding: 10px;
   }
 
   .arrowLeftActive,
   .arrowRightActive {
-    opacity: 100%;
+    opacity: 80%;
     cursor: pointer;
+    padding: 10px;
+    transition: 200ms ease-in-out;
+  }
+
+  .arrowLeftActive:hover,
+  .arrowRightActive:hover {
+    background-color: #b4b4b4;
+    transition: 200ms ease-in-out;
   }
 }
