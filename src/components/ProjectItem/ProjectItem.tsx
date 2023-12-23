@@ -10,6 +10,7 @@ export default function ProjectItem({src, title, description}: TProject) {
         <h1>{title}</h1>
         <p className={s.description}>{description}</p>
       </div>
+      <button className={s.button}>Check it out</button>
     </div>
   )
 }

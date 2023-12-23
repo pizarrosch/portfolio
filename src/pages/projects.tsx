@@ -1,6 +1,6 @@
 import Layout from "@/Layout/Layout";
 import s from './styles/projects.module.scss';
-import bookStorePj from '../../public/assets/Bookstore_pj.png';
+import bookStorePj from '../../public/assets/bookStoreNextJsPj.png';
 import ProjectItem from "@/components/ProjectItem/ProjectItem";
 import kanbanPjImg from '../../public/assets/kanban-board.png';
 import weatherWidgetPjImg from '../../public/assets/weather-widget.png';
