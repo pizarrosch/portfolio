@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   width: 1200px;
-  min-height: 470px;
+  min-height: 479px;
   gap: 50px;
   position: relative;
 
@@ -12,27 +12,37 @@
     margin-top: 0;
   }
 
-  .pjImage {
-    border: 2px #8fabe8 solid;
-    border-radius: 8px;
+  .imageWrapper {
+    width: 607px;
+    height: 293px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+
+    .pjImage {
+      height: 100%;
+      width: initial;
+    }
   }
+
 
   .description {
     font-size: 20px;
     font-weight: 200;
   }
 
-  .button {
-    width: 150px;
-    height: 50px;
-    border-radius: 8px;
-    background-color: blueviolet;
-    color: white;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 200;
+  .buttonLink {
     position: absolute;
     bottom: -60px;
+
+    .button {
+      width: 150px;
+      height: 50px;
+      border-radius: 8px;
+      background-color: blueviolet;
+      color: white;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: 200;
+    }
   }
 }

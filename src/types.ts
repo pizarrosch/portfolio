@@ -7,5 +7,6 @@ export type TShowStatus = {
 export type TProject = {
     src: StaticImageData,
     title: string,
-    description: string
+    description: string,
+    url?: string
 }

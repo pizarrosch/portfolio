@@ -23,7 +23,8 @@ export const pjItemsData = [
     id: 2,
     src: bookStorePj,
     title: 'Book Store',
-    description: 'Book store page written with NextJS'
+    description: 'Book store page written with NextJS',
+    url: 'https://book-store-nextjs-j4n9voyji-pizarrosch.vercel.app/'
   },
   {
     id: 3,
