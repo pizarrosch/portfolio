@@ -11,12 +11,14 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import {activateAnimationSlice} from "@/redux/slices/activateAnimationSlice";
+import {themeSlice} from "@/redux/slices/themeSlice";
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
 const reducer = combineReducers({
     activationsStatus: activateAnimationSlice.reducer,
+    theme: themeSlice.reducer
 })
 
 const persistConfig = {
