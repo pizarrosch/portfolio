@@ -1,0 +1,30 @@
+.rootVisible,
+.rootInvisible
+{
+  box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+  border-radius: 6px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 80px;
+  right: 55px;
+  text-align: center;
+  background-color: white;
+  opacity: 0.8;
+ z-index: 1;
+}
+
+.listItem {
+  cursor: pointer;
+}
+
+.rootInvisible {
+  display: none;
+}
+
+.line {
+  width: 90%;
+}

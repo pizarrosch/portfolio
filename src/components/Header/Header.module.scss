@@ -16,13 +16,13 @@
     width: 400px;
     margin-right: 30px;
 
-    > div {
+    .menu {
       cursor: pointer;
       transition: 200ms ease-in-out;
     }
   }
 
-  .navigation > div:hover {
+  .menu:hover {
     color: #8fabe8;
     height: 19px;
     transition: 200ms ease-in-out;
