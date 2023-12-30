@@ -1,5 +1,6 @@
 import s from './Header.module.scss';
 import Link from "next/link";
+import ThemeMenuButton from "@/components/Theme/Theme Menu Button/ThemeMenuButton";
 
 export default function Header() {
     return (
@@ -14,6 +15,7 @@ export default function Header() {
                 <Link href='/projects'>
                     <div>Projects</div>
                 </Link>
+                <ThemeMenuButton />
             </nav>
         </div>
     )
