@@ -19,14 +19,15 @@ export const pjItemsData = [
     id: 1,
     src: weatherWidgetPjImg,
     title: 'Weather Widget',
-    description: 'The weather app, where you can check the actual weather all over the world as well as the weather for the next 5 days',
+    description: `The weather app, where you can check the actual weather all over the world as well as the weather for the next 5 days.
+                  Written in React as well, it was my first project where I worked with API (openweather.com)`,
     url: 'https://weather-widget-sf.vercel.app/'
   },
   {
     id: 2,
     src: bookStorePj,
     title: 'Book Store',
-    description: `Book store page written with NextJS. In order to add books to the cart you must log in. 
+    description: `Book store page was my first connection to NextJS. In order to add books to the cart you must log in. 
                   Just use 'shomakhov@skillfactory.ru' as login and 'Zaurskillfactory' as password`,
     url: 'https://book-store-nextjs-j4n9voyji-pizarrosch.vercel.app/'
   },
@@ -40,8 +41,12 @@ export const pjItemsData = [
   {
     id: 4,
     src: diplomaPjImg,
-    title: 'Company Taxpayer Information Number',
-    description: 'The popular kanban board, where different tasks can be managed',
+    title: 'Company Search Portal by TIN',
+    description: `The final project of my 14 month long 'Frontend developer PRO' course. In this peoject the information 
+                  about companies can be found by using the Taxpayer Identification Number (TIN). As the course was provided by Russian 
+                  Institution, only the companies on the territory of Russian Federation can be looked for, e.g. Lukoil, Sberbank, etc.
+                  Nevertheless, I think this project can also shed some light on my actual developer skills.
+                  Login data are required on this page. Login: sf_student8, password: 5QB0KM/`,
     url: 'https://diploma-project-skillfactory-react.vercel.app/dashboard'
   }
 ]
