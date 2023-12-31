@@ -1,20 +1,16 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {activateAnimationSlice} from "@/redux/slices/activateAnimationSlice";
+import {TTheme} from "@/types";
 
 export const themeSlice = createSlice({
   name: 'theme',
-  initialState: 'sun' as string,
+  initialState: {
+    theme: 'light'
+  } as TTheme,
   reducers: {
-    lightTheme: (state: string) => {
-      state = 'sun'
+    switchTheme: (state: TTheme, action: PayloadAction<string>) => {
+      state.theme = action.payload;
     },
-    darkTheme: (state: string) => {
-      state = 'dark'
-    },
-    darkHelloweenTheme: (state: string) => {
-      state = 'helloween'
-    }
   }
 })
 
-export const {lightTheme, darkTheme, darkHelloweenTheme} = themeSlice.actions;
+export const {switchTheme} = themeSlice.actions;

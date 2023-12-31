@@ -19,6 +19,12 @@
 
 .listItem {
   cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.listItem:hover {
+  color: #8fabe8;
+  transition: 200ms ease-in-out;
 }
 
 .rootInvisible {

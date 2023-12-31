@@ -10,3 +10,7 @@ export type TProject = {
     description: string,
     url?: string
 }
+
+export type TTheme = {
+    theme: string
+}
