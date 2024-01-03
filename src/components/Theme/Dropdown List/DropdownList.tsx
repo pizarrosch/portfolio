@@ -15,20 +15,24 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
 
   return (
     <div className={isDropdownVisible ? s.rootVisible : s.rootInvisible}>
-      <span className={s.listItem} onClick={() => {
-        dispatch(switchTheme('light'));
-        setIsDropdownVisible(false);
-      }}>Light</span>
-      <hr className={s.line}/>
+      <div className={s.listItemWrapper}>
+        <span className={s.listItem} onClick={() => {
+          dispatch(switchTheme('light'));
+          setIsDropdownVisible(false);
+        }}>Light</span>
+      </div>
+      <div className={s.listItemWrapper}>
       <span className={s.listItem} onClick={() => {
         dispatch(switchTheme('dark'));
         setIsDropdownVisible(false);
       }}>Dark</span>
-      <hr className={s.line}/>
+      </div>
+        <div className={s.listItemWrapper}>
       <span className={s.listItem} onClick={() => {
         dispatch(switchTheme('darkHelloween'));
         setIsDropdownVisible(false);
       }}>Dark Helloween</span>
+        </div>
     </div>
   )
 }

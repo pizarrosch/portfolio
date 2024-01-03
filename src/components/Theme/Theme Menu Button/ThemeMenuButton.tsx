@@ -11,8 +11,8 @@ export default function ThemeMenuButton({onClick}: {onClick: () => void}) {
   const actualTheme = useAppSelector((state: RootState) => state.theme);
 
   return (
-    actualTheme.theme === 'light' ? <Image src={sun} alt='sun' onClick={onClick}/> :
-      actualTheme.theme === 'dark' ? <Image src={moon} alt='moon' onClick={onClick}/> :
-        <Image src={pumpkin} alt='pumpkin' onClick={onClick}/>
+    actualTheme.theme === 'light' ? <Image src={sun} alt='sun' onClick={onClick} style={{cursor: 'pointer'}}/> :
+      actualTheme.theme === 'dark' ? <Image src={moon} alt='moon' onClick={onClick} style={{cursor: 'pointer'}}/> :
+        <Image src={pumpkin} alt='pumpkin' onClick={onClick} style={{cursor: 'pointer'}}/>
   )
 }
