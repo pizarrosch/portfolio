@@ -9,7 +9,7 @@
   gap: 5px;
   position: absolute;
   top: 80px;
-  right: 40px;
+  right: 1.5%;
   text-align: center;
   background-color: white;
   opacity: 0.8;
@@ -18,16 +18,24 @@
   font-size: 18px;
 }
 
-.listItemWrapper {
+.listItemWrapper,
+.chosenItem
+{
   padding: 5px 10px;
-  transition: 300ms ease-in-out;
+  transition: 200ms ease-in-out;
   cursor: pointer;
+}
+
+.chosenItem {
+  background-color: #6909a3;
+  color: floralwhite;
+  border-radius: 6px;
 }
 
 .listItemWrapper:hover {
   background-color: #6909a3;
   color: floralwhite;
-  transition: 300ms ease-in-out;
+  transition: 200ms ease-in-out;
   border-radius: 6px;
 }
 
