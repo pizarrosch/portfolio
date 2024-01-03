@@ -1,4 +1,6 @@
-.root {
+.root,
+.darkRoot
+{
   background-color: #eeeeee;
   align-items: center;
   box-sizing: border-box;
@@ -25,6 +27,11 @@
     box-sizing: border-box;
     padding: 6px;
   }
+}
+
+.darkRoot {
+  background-color: #383E47;
+  color: #DCE0E5;
 }
 
 

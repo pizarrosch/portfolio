@@ -6,10 +6,15 @@ import X from '../../../public/assets/black_icons/social-icon-white-x.svg';
 import facebook from '../../../public/assets/black_icons/facebook.svg';
 import instagram from '../../../public/assets/black_icons/instagram.svg';
 import Link from "next/link";
+import {useAppSelector} from "@/hooks/hooks";
+import {RootState} from "@/redux/store";
 
 export default function Footer() {
+
+  const actualTheme = useAppSelector((state: RootState) => state.theme);
+
   return (
-    <div className={s.root}>
+    <div className={actualTheme.theme === 'light' ? s.root : s.darkRoot}>
       <Link href='https://github.com/pizarrosch' title='github' target='_blank'>
         <Image className={s.image} src={gitHub} alt=''/>
       </Link>

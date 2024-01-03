@@ -16,23 +16,30 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
 
   return (
     <div className={isDropdownVisible ? s.rootVisible : s.rootInvisible}>
-      <div className={actualTheme.theme === 'light' ? s.chosenItem : s.listItemWrapper}>
-        <span className={s.listItem} onClick={() => {
+      <div
+        className={actualTheme.theme === 'light' ? s.chosenItem : s.listItemWrapper}
+        onClick={() => {
           dispatch(switchTheme('light'));
           setIsDropdownVisible(false);
-        }}>Light</span>
+        }}>
+        <span className={s.listItem}>Light</span>
       </div>
-      <div className={actualTheme.theme === 'dark' ? s.chosenItem : s.listItemWrapper}>
-      <span className={s.listItem} onClick={() => {
-        dispatch(switchTheme('dark'));
-        setIsDropdownVisible(false);
-      }}>Dark</span>
+      <div
+        className={actualTheme.theme === 'dark' ? s.chosenItem : s.listItemWrapper}
+        onClick={() => {
+          dispatch(switchTheme('dark'));
+          setIsDropdownVisible(false);
+        }}>
+        <span className={s.listItem}>Dark</span>
       </div>
-      <div className={actualTheme.theme === 'darkHelloween' ? s.chosenItem : s.listItemWrapper}>
-      <span className={s.listItem} onClick={() => {
-        dispatch(switchTheme('darkHelloween'));
-        setIsDropdownVisible(false);
-      }}>Dark Helloween</span>
+      <div
+        className={actualTheme.theme === 'darkHelloween' ? s.chosenItem : s.listItemWrapper}
+        onClick={() => {
+          dispatch(switchTheme('darkHelloween'));
+          setIsDropdownVisible(false);
+        }}
+      >
+        <span className={s.listItem}>Dark Helloween</span>
       </div>
     </div>
   )

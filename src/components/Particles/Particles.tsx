@@ -9,16 +9,11 @@ const ParticlesComponent = () => {
     const [ init, setInit ] = useState(false);
 
     const activationStatus = useAppSelector((state: RootState) => state.activationsStatus);
+    const actualTheme = useAppSelector((state: RootState) => state.theme);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
-            // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-            // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-            // starting from v2 you can add only the features you need reducing the bundle size
-            //await loadAll(engine);
-            //await loadFull(engine);
             await loadFull(engine);
-            //await loadBasic(engine);
         })
             .then(() => {
                 setInit(true);
@@ -29,7 +24,7 @@ const ParticlesComponent = () => {
         init && <Particles options={{
             background: {
                 color: {
-                    value: "#ffffff",
+                    value: actualTheme.theme === 'light' ? "#ffffff" : "#404854",
                 },
             },
             fpsLimit: 120,
@@ -56,10 +51,10 @@ const ParticlesComponent = () => {
             },
             particles: {
                 color: {
-                    value: "#989898",
+                    value: actualTheme.theme === 'light' ? "#989898" : "#F6F7F9",
                 },
                 links: {
-                    color: "#989898",
+                    color: actualTheme.theme === 'light' ? "#989898" : "#F6F7F9",
                     distance: 150,
                     enable: true,
                     opacity: 0.5,
