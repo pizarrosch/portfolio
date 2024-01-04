@@ -15,9 +15,17 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
   const dispatch = useAppDispatch();
 
   return (
-    <div className={isDropdownVisible ? s.rootVisible : s.rootInvisible}>
+    <div className={
+      isDropdownVisible && actualTheme.theme === 'light' ? s.rootVisible :
+        isDropdownVisible && actualTheme.theme === 'dark' ? s.rootDarkMode :
+          isDropdownVisible && actualTheme.theme === 'darkHelloween' ? s.rootDarkMode : s.rootInvisible}>
       <div
-        className={actualTheme.theme === 'light' ? s.chosenItem : s.listItemWrapper}
+        className={
+          actualTheme.theme === 'light' ? s.chosenItem :
+            actualTheme.theme === 'darkHelloween' ? s.listItemWrapperHelloween :
+              actualTheme.theme === 'dark' ? s.listItemWrapperDark :
+                s.listItemWrapper
+        }
         onClick={() => {
           dispatch(switchTheme('light'));
           setIsDropdownVisible(false);
@@ -25,7 +33,11 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
         <span className={s.listItem}>Light</span>
       </div>
       <div
-        className={actualTheme.theme === 'dark' ? s.chosenItem : s.listItemWrapper}
+        className={
+          actualTheme.theme === 'dark' ? s.chosenItemDarkMode :
+            actualTheme.theme === 'darkHelloween' ? s.listItemWrapperHelloween :
+              actualTheme.theme === 'light' ? s.listItemWrapper : s.listItemWrapperDark
+        }
         onClick={() => {
           dispatch(switchTheme('dark'));
           setIsDropdownVisible(false);
@@ -33,7 +45,12 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
         <span className={s.listItem}>Dark</span>
       </div>
       <div
-        className={actualTheme.theme === 'darkHelloween' ? s.chosenItem : s.listItemWrapper}
+        className={
+          actualTheme.theme === 'darkHelloween' ? s.chosenItemHelloweenMode :
+            actualTheme.theme === 'dark' ? s.listItemWrapperDark :
+              actualTheme.theme === 'light' ? s.listItemWrapper :
+                s.listItemWrapperHelloween
+        }
         onClick={() => {
           dispatch(switchTheme('darkHelloween'));
           setIsDropdownVisible(false);

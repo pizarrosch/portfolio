@@ -1,5 +1,7 @@
 .rootVisible,
-.rootInvisible {
+.rootInvisible,
+.rootDarkMode
+{
   display: flex;
   flex-direction: column;
   box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
@@ -19,30 +21,62 @@
 }
 
 .listItemWrapper,
-.chosenItem
+.listItemWrapperDark,
+.listItemWrapperHelloween,
+.chosenItem,
+.chosenItemDarkMode,
+.chosenItemHelloweenMode
 {
   padding: 5px 10px;
   transition: 200ms ease-in-out;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .chosenItem {
   background-color: #6909a3;
   color: floralwhite;
+}
+
+.chosenItemDarkMode {
+  background-color: #DCE0E5;
+  color: #383E47;
+}
+
+.chosenItemHelloweenMode {
+  background-color: #EB6847;
+  color: #404854;
+}
+
+.listItemWrapper:hover,
+.listItemWrapperDark:hover,
+.listItemWrapperHelloween:hover
+{
+  transition: 200ms ease-in-out;
   border-radius: 6px;
 }
 
 .listItemWrapper:hover {
   background-color: #6909a3;
   color: floralwhite;
-  transition: 200ms ease-in-out;
-  border-radius: 6px;
+}
+
+.listItemWrapperDark:hover {
+  background-color: #DCE0E5;
+  color: #383E47;
+}
+
+.listItemWrapperHelloween:hover {
+  background-color: #EB6847;
+  color: #404854;
 }
 
 .rootInvisible {
   display: none;
 }
 
-.line {
-  width: 90%;
+.rootDarkMode {
+  background-color: #383E47;
+  box-shadow: #DCE0E5 0 2px 4px 0, #DCE0E5 0 2px 16px 0;
+  opacity: 0.9;
 }
