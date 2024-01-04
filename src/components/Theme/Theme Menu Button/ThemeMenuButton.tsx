@@ -1,6 +1,6 @@
 import Image from "next/image";
 import sun from '../../../../public/assets/sunny.png';
-import moon from '../../../../public/assets/moon-dark.png';
+import moon from '../../../../public/assets/moon.png';
 import pumpkin from '../../../../public/assets/jack-o-lantern-2.png';
 import {useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";

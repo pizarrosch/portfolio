@@ -58,16 +58,18 @@
 
 .listItemWrapper:hover {
   background-color: #6909a3;
+  opacity: 0.5;
   color: floralwhite;
 }
 
 .listItemWrapperDark:hover {
   background-color: #DCE0E5;
   color: #383E47;
+  opacity: 0.7;
 }
 
 .listItemWrapperHelloween:hover {
-  background-color: #EB6847;
+  background-color: #FF9980;
   color: #404854;
 }
 

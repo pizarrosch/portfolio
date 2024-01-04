@@ -10,20 +10,33 @@ const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
   const activationStatus = useAppSelector((state: RootState) => state.activationsStatus);
+  const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();
 
   return (
     <Layout>
       <div className={s.switcherContainer}>
-        <span style={{color: '#5d5d5d'}}>Animation</span>
+        <span className={
+          actualTheme.theme === 'light' ? s.titleLight : s.titleDark
+        }>Animation</span>
         <div
-          className={activationStatus.active ? s.switchCircleWrapperOn : s.switchCircleWrapperOff}
+          className={
+            activationStatus.active && actualTheme.theme === 'light' ? s.switchCircleWrapperOn :
+              activationStatus.active && actualTheme.theme === 'dark' ? s.switchCircleWrapperOnDarkMode :
+                activationStatus.active && actualTheme.theme === 'darkHelloween' ? s.switchCircleWrapperOnHelloweenMode :
+                  s.switchCircleWrapperOff
+          }
           onClick={() => {
             return activationStatus.active ? dispatch(activate(false)) : dispatch(activate(true));
           }
           }
         >
-          <div className={activationStatus.active ? s.switcherOn : s.switcherOff}></div>
+          <div className={
+            activationStatus.active && actualTheme.theme === 'light' ? s.switcherOn :
+              activationStatus.active && actualTheme.theme === 'dark' ? s.switcherOnDarkMode :
+                activationStatus.active && actualTheme.theme === 'darkHelloween' ? s.switcherOnHelloweenMode :
+                  s.switcherOff
+          }></div>
         </div>
       </div>
       <Main/>

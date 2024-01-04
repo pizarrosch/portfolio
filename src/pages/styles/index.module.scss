@@ -8,9 +8,19 @@
   position: absolute;
   bottom: 35px;
 
+  .titleLight {
+    color: #5d5d5d;
+  }
+
+  .titleDark {
+    color: #DCE0E5;
+  }
+
   .switchCircleWrapper,
   .switchCircleWrapperOff,
-  .switchCircleWrapperOn
+  .switchCircleWrapperOn,
+  .switchCircleWrapperOnDarkMode,
+  .switchCircleWrapperOnHelloweenMode
   {
     width: 50px;
     height: 25px;
@@ -21,7 +31,9 @@
 
     .switcher,
     .switcherOff,
-    .switcherOn
+    .switcherOn,
+    .switcherOnDarkMode,
+    .switcherOnHelloweenMode
     {
       position: absolute;
       width: 30px;
@@ -39,6 +51,17 @@
       right: -2.5px;
       background-color: #6909a3;
     }
+
+    .switcherOnDarkMode {
+      right: -2.5px;
+      background-color: #738091;
+    }
+
+    .switcherOnHelloweenMode {
+      right: -2.5px;
+      background-color: #EB6847;
+      border: 1px solid #b4b4b4;
+    }
   }
 
   .switchCircleWrapperOff {
@@ -47,5 +70,13 @@
 
   .switchCircleWrapperOn {
     background-color: #ac87c3;
+  }
+
+  .switchCircleWrapperOnDarkMode {
+    background-color: #DCE0E5;
+  }
+
+  .switchCircleWrapperOnHelloweenMode {
+    background-color: #EB6847;
   }
 }
