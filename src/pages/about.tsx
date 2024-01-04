@@ -1,6 +1,7 @@
 import Layout from "@/Layout/Layout";
 import s from './styles/about.module.scss';
 import Zaur from '../../public/assets/Zaur.jpeg';
+import certificate from '../../public/assets/certificate.png';
 import Image from "next/image";
 import Skills from "@/components/Skills/Skills";
 import {SKILLS} from "@/data";
@@ -17,7 +18,10 @@ export default function About() {
         <div className={s.aboutMeContainer}>
           <Image src={Zaur} alt='' className={actualTheme.theme === 'light' ? s.profileImage : s.profileImageDark}/>
           <div className={s.aboutMeWrapper}>
-            <span className={actualTheme.theme === 'darkHelloween' ? s.titleHelloween : s.title}>About me</span>
+            <span className={
+              actualTheme.theme === 'darkHelloween' ? s.titleHelloween :
+                actualTheme.theme === 'dark' ? s.titleDark : s.title
+            }>About me</span>
             <article>
               <p>
                 My name is Zaur. I am a chemist who one day wanted to change <br/> his profession to
@@ -43,7 +47,10 @@ export default function About() {
         </div>
         <div className={s.skillsWrapper}>
           <div className={s.wrapper}>
-            <span className={actualTheme.theme === 'darkHelloween' ? s.titleHelloween : s.title}>My skills:</span>
+            <span className={
+              actualTheme.theme === 'darkHelloween' ? s.titleHelloween :
+                actualTheme.theme === 'dark' ? s.titleDark : s.title
+            }>My skills:</span>
             <div className={s.skillsContainer}>
               {SKILLS.map((skill: string, id: number) => {
                 return (
@@ -53,7 +60,10 @@ export default function About() {
             </div>
           </div>
           <div className={s.wrapper}>
-            <span className={actualTheme.theme === 'darkHelloween' ? s.titleHelloween : s.title}>My languages:</span>
+            <span className={
+              actualTheme.theme === 'darkHelloween' ? s.titleHelloween :
+                actualTheme.theme === 'dark' ? s.titleDark : s.title
+            }>My languages:</span>
             <div className={s.langSkillsContainer}>
               <Skills skill='English - fluent'/>
               <Skills skill='German - fluent'/>
@@ -61,6 +71,13 @@ export default function About() {
               <Skills skill='Russian - mother tongue'/>
             </div>
           </div>
+        </div>
+        <div className={s.certificateWrapper}>
+          <h1 className={
+            actualTheme.theme === 'darkHelloween' ? s.titleHelloween :
+              actualTheme.theme === 'dark' ? s.titleDark : s.title
+          }>Certificate</h1>
+          <Image src={certificate} alt='' className={s.certificate}/>
         </div>
       </div>
     </Layout>

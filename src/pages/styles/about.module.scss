@@ -1,6 +1,5 @@
 .root,
-.darkRoot
-{
+.darkRoot {
   width: 100%;
   min-height: calc(100vh - 200px);
   background-color: #F6F7F9;
@@ -12,7 +11,7 @@
 
   .aboutMeContainer {
     display: flex;
-    gap: 60px;
+    gap: 88px;
     margin: 50px 0 40px 0;
     align-items: center;
   }
@@ -23,15 +22,14 @@
   }
 
   .title,
-  .titleHelloween
-  {
+  .titleHelloween,
+  .titleDark {
     font-size: 40px;
     font-weight: 500;
   }
 
   .profileImage,
-  .profileImageDark
-  {
+  .profileImageDark {
     height: auto;
     width: 450px;
     border-radius: 50%;
@@ -56,6 +54,25 @@
       gap: 20px;
       row-gap: 20px;
       justify-content: flex-start;
+    }
+  }
+
+  .title,
+  .titleDark {
+    margin-top: 0;
+    color: #404854;
+  }
+
+  .titleDark {
+    color: #F6F7F9;
+  }
+
+  .certificateWrapper {
+    margin-bottom: 70px;
+
+    .certificate {
+      width: 720px;
+      height: auto;
     }
   }
 }
