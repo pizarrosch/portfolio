@@ -11,7 +11,7 @@
   gap: 5px;
   position: absolute;
   top: 80px;
-  right: 1.5%;
+  right: 55px;
   text-align: center;
   background-color: white;
   opacity: 0.8;
@@ -57,20 +57,19 @@
 }
 
 .listItemWrapper:hover {
-  background-color: #6909a3;
-  opacity: 0.5;
-  color: floralwhite;
+  background-color: #D69FD6;
+  color: #252A31;
 }
 
 .listItemWrapperDark:hover {
   background-color: #DCE0E5;
-  color: #383E47;
+  color: #252A31;
   opacity: 0.7;
 }
 
 .listItemWrapperHelloween:hover {
   background-color: #FF9980;
-  color: #404854;
+  color: #252A31;
 }
 
 .rootInvisible {

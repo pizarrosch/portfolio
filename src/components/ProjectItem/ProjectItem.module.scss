@@ -8,15 +8,24 @@
   gap: 50px;
   position: relative;
 
-  h1 {
+  .title,
+  .titleDark
+  {
     margin-top: 0;
     color: #404854;
   }
 
-  .imageWrapper {
+  .titleDark {
+    color: #F6F7F9;
+  }
+
+  .imageWrapper,
+  .imageWrapperDark
+  {
     width: 607px;
     height: 293px;
     box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+    background-color: white;
 
     .pjImage {
       height: 100%;
@@ -24,17 +33,28 @@
     }
   }
 
+.imageWrapperDark {
+  box-shadow: #E5E8EB 0 2px 4px 0, #E5E8EB 0 2px 16px 0;
+}
 
-  .description {
+  .description,
+  .descriptionDark
+  {
     font-size: 20px;
     font-weight: 200;
+  }
+
+  .descriptionDark {
+    color: #F6F7F9;
   }
 
   .buttonLink {
     position: absolute;
     bottom: -25px;
 
-    .button {
+    .button,
+    .buttonDark
+    {
       width: 150px;
       height: 50px;
       border-radius: 8px;
@@ -44,6 +64,16 @@
       font-size: 20px;
       cursor: pointer;
       font-weight: 200;
+    }
+
+    .buttonDark {
+      background-color: #EB6847;
+      color: #F6F7F9;
+    }
+
+    .buttonDark:hover,
+    .button:hover {
+      opacity: 0.8;
     }
   }
 }
