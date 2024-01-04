@@ -15,9 +15,9 @@ export default function About() {
     <Layout>
       <div className={actualTheme.theme === 'light' ? s.root : s.darkRoot}>
         <div className={s.aboutMeContainer}>
-          <Image src={Zaur} alt='' className={s.profileImage}/>
+          <Image src={Zaur} alt='' className={actualTheme.theme === 'light' ? s.profileImage : s.profileImageDark}/>
           <div className={s.aboutMeWrapper}>
-            <span className={s.title}>About me</span>
+            <span className={actualTheme.theme === 'darkHelloween' ? s.titleHelloween : s.title}>About me</span>
             <article>
               <p>
                 My name is Zaur. I am a chemist who one day wanted to change <br/> his profession to
@@ -43,7 +43,7 @@ export default function About() {
         </div>
         <div className={s.skillsWrapper}>
           <div className={s.wrapper}>
-            <span className={s.title}>My skills:</span>
+            <span className={actualTheme.theme === 'darkHelloween' ? s.titleHelloween : s.title}>My skills:</span>
             <div className={s.skillsContainer}>
               {SKILLS.map((skill: string, id: number) => {
                 return (
@@ -53,7 +53,7 @@ export default function About() {
             </div>
           </div>
           <div className={s.wrapper}>
-            <span className={s.title}>My languages:</span>
+            <span className={actualTheme.theme === 'darkHelloween' ? s.titleHelloween : s.title}>My languages:</span>
             <div className={s.langSkillsContainer}>
               <Skills skill='English - fluent'/>
               <Skills skill='German - fluent'/>

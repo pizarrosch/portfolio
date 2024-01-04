@@ -24,7 +24,7 @@ const ParticlesComponent = () => {
         init && <Particles options={{
             background: {
                 color: {
-                    value: actualTheme.theme === 'light' ? "#ffffff" : "#404854",
+                    value: actualTheme.theme === 'light' ? "#F6F7F9" : "#404854",
                 },
             },
             fpsLimit: 120,

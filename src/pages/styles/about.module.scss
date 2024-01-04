@@ -22,12 +22,16 @@
     flex-direction: column;
   }
 
-  .title {
+  .title,
+  .titleHelloween
+  {
     font-size: 40px;
     font-weight: 500;
   }
 
-  .profileImage {
+  .profileImage,
+  .profileImageDark
+  {
     height: auto;
     width: 450px;
     border-radius: 50%;
@@ -58,4 +62,13 @@
 
 .darkRoot {
   background-color: #404854;
+  color: #DCE0E5;
+
+  .profileImageDark {
+    opacity: 0.9;
+  }
+
+  .titleHelloween {
+    color: #EB6847;
+  }
 }
