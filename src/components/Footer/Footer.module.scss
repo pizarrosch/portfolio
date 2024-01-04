@@ -12,13 +12,48 @@
   width: 100%;
 
   .image,
-  .x_ixon {
+  .x_ixon,
+  {
     height: 32px;
     width: 32px;
+    position: relative;
 
     &:hover {
       opacity: 0.6;
     }
+
+  }
+
+  .imageBackdropGithub,
+  .imageBackdropLinkedIn,
+  .imageBackdropFacebook,
+  .imageBackdropInstagram
+  {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #F6F7F9;
+    border-radius: 50%;
+  }
+
+  .imageBackdropGithub {
+    right: 259px;
+    bottom: 37px;
+  }
+
+  .imageBackdropLinkedIn {
+    right: 145px;
+    bottom: 37px;
+  }
+
+  .imageBackdropFacebook {
+    right: 88px;
+    bottom: 37px;
+  }
+
+  .imageBackdropInstagram {
+    right: 31px;
+    bottom: 37px;
   }
 
   .x_ixon {
