@@ -36,24 +36,44 @@
     border-radius: 50%;
   }
 
-  .imageBackdropGithub {
-    right: 259px;
-    bottom: 37px;
+  .githubIconWrapper {
+    position: relative;
+
+    .imageBackdropGithub {
+      position: absolute;
+      right: 1px;
+      bottom: 5px;
+    }
   }
 
-  .imageBackdropLinkedIn {
-    right: 145px;
-    bottom: 37px;
+  .linkedInIconWrapper {
+    position: relative;
+
+    .imageBackdropLinkedIn {
+      position: absolute;
+      right: 1px;
+      bottom: 5px;
+    }
   }
 
-  .imageBackdropFacebook {
-    right: 88px;
-    bottom: 37px;
+  .facebookIconWrapper {
+    position: relative;
+
+    .imageBackdropFacebook {
+      position: absolute;
+      right: 1px;
+      bottom: 5px;
+    }
   }
 
-  .imageBackdropInstagram {
-    right: 31px;
-    bottom: 37px;
+  .instagramIconWrapper {
+    position: relative;
+
+    .imageBackdropInstagram {
+      position: absolute;
+      right: 1px;
+      bottom: 5px;
+    }
   }
 
   .x_ixon {
