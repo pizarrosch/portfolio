@@ -46,7 +46,7 @@
   background-color: #404854;
 }
 
-@media all and (min-width: 430px) {
+@media all and (max-width: 430px) {
   .root {
 
     .greetingsTitle,

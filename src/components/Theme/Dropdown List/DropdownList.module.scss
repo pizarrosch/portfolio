@@ -92,7 +92,7 @@
   color: #252A31;
 }
 
-@media all and (min-width: 430px) {
+@media all and (max-width: 430px) {
   .rootVisibleMobile,
   .rootDarkModeMobile {
     display: flex;

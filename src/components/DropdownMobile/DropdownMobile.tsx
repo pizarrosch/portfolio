@@ -6,7 +6,11 @@ import Link from "next/link";
 import headerStyle from '../Header/Header.module.scss';
 import listItemStyle from '../Theme/Dropdown List/DropdownList.module.scss';
 
-export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible}: TDropdown) {
+type TProps = {
+  onClick: () => void
+} & TDropdown
+
+export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible, onClick}: TProps) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();
@@ -62,9 +66,7 @@ export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible}
                 listItemStyle.listItemWrapperHelloween
         }>
         <span className={listItemStyle.listItem}>
-          <Link href='/projects'>
-            <div className={headerStyle.menu}>Themes</div>
-          </Link>
+          <div className={headerStyle.menu} onClick={onClick}>Themes</div>
         </span>
       </div>
     </div>
