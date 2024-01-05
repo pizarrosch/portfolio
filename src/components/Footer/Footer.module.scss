@@ -1,6 +1,5 @@
 .root,
-.darkRoot
-{
+.darkRoot {
   background-color: #eeeeee;
   align-items: center;
   box-sizing: border-box;
@@ -27,8 +26,7 @@
   .imageBackdropGithub,
   .imageBackdropLinkedIn,
   .imageBackdropFacebook,
-  .imageBackdropInstagram
-  {
+  .imageBackdropInstagram {
     position: absolute;
     height: 30px;
     width: 30px;
@@ -89,4 +87,11 @@
   color: #DCE0E5;
 }
 
+@media all and (min-width: 430px) {
+  .root,
+  .darkRoot {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
 

@@ -80,3 +80,9 @@
     background-color: #EB6847;
   }
 }
+
+@media all and (min-width: 430px) {
+ .switcherContainer {
+   display: none;
+ }
+}

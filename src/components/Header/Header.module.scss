@@ -1,6 +1,5 @@
 .root,
-.darkRoot,
-{
+.darkRoot {
   background-color: #eeeeee;
   width: 100%;
   height: 100px;
@@ -9,6 +8,10 @@
   justify-content: flex-end;
   padding-right: 50px;
   box-sizing: border-box;
+
+  .listMenu {
+    display: none;
+  }
 
   .navigation {
     display: flex;
@@ -35,4 +38,22 @@
 .darkRoot {
   background-color: #383E47;
   color: #DCE0E5;
+}
+
+@media all and (min-width: 430px) {
+  .root,
+  .darkRoot {
+    justify-content: flex-start;
+
+    .listMenu {
+      display: block;
+      margin-left: 30px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .navigation {
+      display: none;
+    }
+  }
 }

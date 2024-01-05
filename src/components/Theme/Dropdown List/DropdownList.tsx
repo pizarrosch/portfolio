@@ -1,15 +1,10 @@
 import s from './DropdownList.module.scss';
 import {switchTheme} from "@/redux/slices/themeSlice";
 import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
-import {Dispatch, SetStateAction, useState} from "react";
 import {RootState} from "@/redux/store";
+import {TDropdown} from "@/types";
 
-type TProps = {
-  isDropdownVisible: boolean,
-  setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
-}
-
-export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: TProps) {
+export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: TDropdown) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();

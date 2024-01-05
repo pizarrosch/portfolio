@@ -5,6 +5,9 @@ import DropdownList from "@/components/Theme/Dropdown List/DropdownList";
 import {useState} from "react";
 import {useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
+import listMenu from '../../../public/assets/list menu.png';
+import Image from "next/image";
+import DropdownMobile from "@/components/DropdownMobile/DropdownMobile";
 
 export default function Header() {
 
@@ -17,6 +20,8 @@ export default function Header() {
 
     return (
         <div className={actualTheme.theme === 'light' ? s.root : s.darkRoot}>
+            <Image src={listMenu} alt='list menu cake' className={s.listMenu} onClick={toggleIsVisible}/>
+            <DropdownMobile isDropdownVisible={isVisible} setIsDropdownVisible={setIsVisible}/>
             <nav className={s.navigation}>
                 <Link href='/'>
                     <div className={s.menu}>Home</div>

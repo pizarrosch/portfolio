@@ -1,6 +1,8 @@
 .rootVisible,
 .rootInvisible,
-.rootDarkMode
+.rootDarkMode,
+.rootVisibleMobile,
+.rootDarkModeMobile
 {
   display: flex;
   flex-direction: column;
@@ -18,6 +20,24 @@
   z-index: 1;
   text-transform: none;
   font-size: 18px;
+}
+
+.rootVisibleMobile,
+.rootDarkModeMobile {
+  display: none;
+  left: 10px;
+}
+
+.rootInvisible {
+  display: none;
+}
+
+.rootDarkMode,
+.rootDarkModeMobile
+{
+  background-color: #383E47;
+  box-shadow: #DCE0E5 0 2px 4px 0, #DCE0E5 0 2px 16px 0;
+  opacity: 0.9;
 }
 
 .listItemWrapper,
@@ -72,12 +92,11 @@
   color: #252A31;
 }
 
-.rootInvisible {
-  display: none;
-}
-
-.rootDarkMode {
-  background-color: #383E47;
-  box-shadow: #DCE0E5 0 2px 4px 0, #DCE0E5 0 2px 16px 0;
-  opacity: 0.9;
+@media all and (min-width: 430px) {
+  .rootVisibleMobile,
+  .rootDarkModeMobile {
+    display: flex;
+    right: 0;
+    width: 150px;
+  }
 }
