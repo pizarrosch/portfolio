@@ -45,11 +45,22 @@
   .darkRoot {
     justify-content: flex-start;
 
-    .listMenu {
+    .listMenu,
+    .listMenuDark,
+    .listMenuHelloween
+    {
       display: block;
       margin-left: 30px;
       width: 40px;
       height: 40px;
+    }
+
+    .listMenuDark {
+      background-color: #EDEFF2;
+    }
+
+    .listMenuHelloween {
+      background-color: #EB6847;
     }
 
     .navigation {

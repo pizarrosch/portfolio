@@ -91,242 +91,230 @@
   }
 }
 
-  @media all and (min-width: 320px) and (max-width: 425px) {
-    .root {
-      justify-content: flex-start;
+@media all and (min-width: 320px) and (max-width: 425px) {
+  .root {
+    justify-content: flex-start;
 
-      .textContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imageWrapper,
+    .imageWrapperDark {
+      width: 98%;
+      height: 163px;
+
+      .pjImage {
+        width: initial;
       }
+    }
 
-      .imageWrapper,
-      .imageWrapperDark {
-        width: 98%;
-        height: 163px;
+    .description,
+    .descriptionDark {
+      font-size: 18px;
+      width: 310px;
+    }
 
-        .pjImage {
-          width: initial;
-        }
-      }
+    .buttonContainer {
+      position: initial;
 
-      .description,
-      .descriptionDark {
-        font-size: 18px;
-        width: 310px;
-      }
-
-      .buttonContainer {
-        .buttonLink {
-          position: initial;
-
-          .button,
-          .buttonDark,
-          .buttonDarkHelloween {
-            width: 140px;
-          }
-        }
+      .button,
+      .buttonDark,
+      .buttonDarkHelloween {
+        width: 140px;
       }
     }
   }
+}
 
-  @media all and (min-width: 426px) and (max-width: 500px) {
-    .root {
-      justify-content: flex-start;
+@media all and (min-width: 426px) and (max-width: 500px) {
+  .root {
+    justify-content: flex-start;
 
-      .textContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imageWrapper,
+    .imageWrapperDark {
+      width: 96%;
+      height: 183px;
+
+      .pjImage {
+        width: initial;
       }
+    }
 
-      .imageWrapper,
-      .imageWrapperDark {
-        width: 96%;
-        height: 183px;
+    .description,
+    .descriptionDark {
+      font-size: 18px;
+      width: 410px;
+    }
 
-        .pjImage {
-          width: initial;
-        }
-      }
+    .buttonContainer {
+      position: initial;
 
-      .description,
-      .descriptionDark {
-        font-size: 18px;
-        width: 410px;
-      }
-
-      .buttonContainer {
-        .buttonLink {
-          position: initial;
-
-          .button,
-          .buttonDark,
-          .buttonDarkHelloween {
-            width: 140px;
-          }
-        }
+      .button,
+      .buttonDark,
+      .buttonDarkHelloween {
+        width: 140px;
       }
     }
   }
+}
 
-  @media all and (min-width: 501px) and (max-width: 600px) {
-    .root {
-      justify-content: flex-start;
+@media all and (min-width: 501px) and (max-width: 600px) {
+  .root {
+    justify-content: flex-start;
 
-      .textContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imageWrapper,
+    .imageWrapperDark {
+      width: 96%;
+      height: 200px;
+
+      .pjImage {
+        width: initial;
       }
+    }
 
-      .imageWrapper,
-      .imageWrapperDark {
-        width: 96%;
-        height: 200px;
+    .description,
+    .descriptionDark {
+      font-size: 20px;
+      width: 490px;
+    }
 
-        .pjImage {
-          width: initial;
-        }
-      }
+    .buttonContainer {
+      position: initial;
 
-      .description,
-      .descriptionDark {
-        font-size: 20px;
-        width: 490px;
-      }
-
-      .buttonContainer {
-        .buttonLink {
-          position: initial;
-
-          .button,
-          .buttonDark,
-          .buttonDarkHelloween {
-            width: 140px;
-          }
-        }
+      .button,
+      .buttonDark,
+      .buttonDarkHelloween {
+        width: 140px;
       }
     }
   }
+}
 
-  @media all and (min-width: 601px) and (max-width: 700px) {
-    .root {
-      justify-content: flex-start;
+@media all and (min-width: 601px) and (max-width: 700px) {
+  .root {
+    justify-content: flex-start;
 
-      .textContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imageWrapper,
+    .imageWrapperDark {
+      width: 96%;
+      height: 230px;
+
+      .pjImage {
+        width: initial;
       }
+    }
 
-      .imageWrapper,
-      .imageWrapperDark {
-        width: 96%;
-        height: 230px;
+    .description,
+    .descriptionDark {
+      font-size: 20px;
+      width: 590px;
+    }
 
-        .pjImage {
-          width: initial;
-        }
-      }
+    .buttonContainer {
+      position: initial;
 
-      .description,
-      .descriptionDark {
-        font-size: 20px;
-        width: 590px;
-      }
-
-      .buttonContainer {
-        .buttonLink {
-          position: initial;
-
-          .button,
-          .buttonDark,
-          .buttonDarkHelloween {
-            width: 140px;
-          }
-        }
+      .button,
+      .buttonDark,
+      .buttonDarkHelloween {
+        width: 140px;
       }
     }
   }
+}
 
-  @media all and (min-width: 701px) and (max-width: 800px) {
-    .root {
-      justify-content: flex-start;
+@media all and (min-width: 701px) and (max-width: 800px) {
+  .root {
+    justify-content: flex-start;
 
-      .textContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imageWrapper,
+    .imageWrapperDark {
+      width: 90%;
+      height: 260px;
+
+      .pjImage {
+        width: initial;
       }
+    }
 
-      .imageWrapper,
-      .imageWrapperDark {
-        width: 90%;
-        height: 260px;
+    .description,
+    .descriptionDark {
+      font-size: 20px;
+      width: 690px;
+    }
 
-        .pjImage {
-          width: initial;
-        }
-      }
+    .buttonContainer {
+      position: initial;
 
-      .description,
-      .descriptionDark {
-        font-size: 20px;
-        width: 690px;
-      }
-
-      .buttonContainer {
-        .buttonLink {
-          position: initial;
-
-          .button,
-          .buttonDark,
-          .buttonDarkHelloween {
-            width: 140px;
-          }
-        }
+      .button,
+      .buttonDark,
+      .buttonDarkHelloween {
+        width: 140px;
       }
     }
   }
+}
 
-  @media all and (min-width: 801px) and (max-width: 1023px) {
-    .root {
-      justify-content: flex-start;
+@media all and (min-width: 801px) and (max-width: 1023px) {
+  .root {
+    justify-content: flex-start;
 
-      .textContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imageWrapper,
+    .imageWrapperDark {
+      width: 85%;
+      height: 290px;
+
+      .pjImage {
+        width: initial;
       }
+    }
 
-      .imageWrapper,
-      .imageWrapperDark {
-        width: 85%;
-        height: 290px;
+    .description,
+    .descriptionDark {
+      font-size: 20px;
+      width: 790px;
+    }
 
-        .pjImage {
-          width: initial;
-        }
-      }
+    .buttonContainer {
+      position: initial;
 
-      .description,
-      .descriptionDark {
-        font-size: 20px;
-        width: 790px;
-      }
-
-      .buttonContainer {
-        .buttonLink {
-          position: initial;
-
-          .button,
-          .buttonDark,
-          .buttonDarkHelloween {
-            width: 140px;
-          }
-        }
+      .button,
+      .buttonDark,
+      .buttonDarkHelloween {
+        width: 140px;
       }
     }
   }
+}

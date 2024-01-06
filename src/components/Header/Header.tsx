@@ -33,7 +33,11 @@ export default function Header() {
 
   return (
     <div className={actualTheme.theme === 'light' ? s.root : s.darkRoot}>
-      <Image src={listMenu} alt='list menu cake' className={s.listMenu} onClick={() => {
+      <Image src={listMenu} alt='list menu cake' className={
+        actualTheme.theme === 'dark' ? s.listMenuDark :
+          actualTheme.theme === 'darkHelloween' ? s.listMenuHelloween :
+            s.listMenu
+      } onClick={() => {
           toggleMobileMenuIsVisible();
           setIsVisible(false);
         }
