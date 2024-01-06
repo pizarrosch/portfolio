@@ -2,8 +2,7 @@
 .rootInvisible,
 .rootDarkMode,
 .rootVisibleMobile,
-.rootDarkModeMobile
-{
+.rootDarkModeMobile {
   display: flex;
   flex-direction: column;
   box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
@@ -33,8 +32,7 @@
 }
 
 .rootDarkMode,
-.rootDarkModeMobile
-{
+.rootDarkModeMobile {
   background-color: #383E47;
   box-shadow: #DCE0E5 0 2px 4px 0, #DCE0E5 0 2px 16px 0;
   opacity: 0.9;
@@ -45,8 +43,7 @@
 .listItemWrapperHelloween,
 .chosenItem,
 .chosenItemDarkMode,
-.chosenItemHelloweenMode
-{
+.chosenItemHelloweenMode {
   padding: 5px 10px;
   transition: 200ms ease-in-out;
   cursor: pointer;
@@ -70,8 +67,7 @@
 
 .listItemWrapper:hover,
 .listItemWrapperDark:hover,
-.listItemWrapperHelloween:hover
-{
+.listItemWrapperHelloween:hover {
   transition: 200ms ease-in-out;
   border-radius: 6px;
 }
