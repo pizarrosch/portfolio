@@ -14,9 +14,9 @@ export default function ProjectItem({src, title, description, url}: TProject) {
   return (
     <div className={s.root}>
       <div className={actualTheme.theme === 'light' ? s.imageWrapper : s.imageWrapperDark}>
-        <Image src={src} alt='' className={s.pjImage} width={600}/>
+        <Image src={src} alt='' className={s.pjImage}/>
       </div>
-      <div>
+      <div className={s.textContainer}>
         <h1 className={actualTheme.theme === 'light' ? s.title : s.titleDark}>{title}</h1>
         <p className={actualTheme.theme === 'light' ? s.description : s.descriptionDark}>{description}</p>
       </div>

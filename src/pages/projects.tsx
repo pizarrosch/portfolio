@@ -26,10 +26,13 @@ export default function Projects() {
   return (
     <Layout>
       <div className={actualTheme.theme === 'light' ? s.root : s.darkRoot}>
-        <Image src={leftArrow} alt='' width={64} height={64} className={slideIndex > 0 ? s.arrowLeftActive : s.arrowLeftInactive} onClick={onLeftClick}/>
+        <Image src={leftArrow} alt='' className={slideIndex > 0 ? s.arrowLeftActive : s.arrowLeftInactive}
+               onClick={onLeftClick}/>
         <ProjectItem src={pjItemsData[slideIndex].src} title={pjItemsData[slideIndex].title}
                      description={pjItemsData[slideIndex].description} url={pjItemsData[slideIndex].url}/>
-        <Image src={leftArrow} alt='' width={64} height={64} className={slideIndex === pjItemsData.length - 1 ? s.arrowRightInactive : s.arrowRightActive} onClick={onRightClick}/>
+        <Image src={leftArrow} alt=''
+               className={slideIndex === pjItemsData.length - 1 ? s.arrowRightInactive : s.arrowRightActive}
+               onClick={onRightClick}/>
       </div>
     </Layout>
   )
