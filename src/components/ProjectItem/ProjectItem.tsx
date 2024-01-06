@@ -4,6 +4,8 @@ import s from './ProjectItem.module.scss';
 import Link from "next/link";
 import {useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
+import github from '../../../public/assets/github-mark-white.svg';
+import githubDark from '../../../public/assets/github-mark.svg';
 
 export default function ProjectItem({src, title, description, url}: TProject) {
 
@@ -18,9 +20,27 @@ export default function ProjectItem({src, title, description, url}: TProject) {
         <h1 className={actualTheme.theme === 'light' ? s.title : s.titleDark}>{title}</h1>
         <p className={actualTheme.theme === 'light' ? s.description : s.descriptionDark}>{description}</p>
       </div>
-      <Link href={url ? url : ''} target={url ? "_blank" : ''} className={s.buttonLink}>
-        <button className={actualTheme.theme === 'light' ? s.button : s.buttonDark}>Check it out</button>
-      </Link>
+      <div className={s.buttonContainer}>
+        <Link href={url ? url : ''} target={url ? "_blank" : ''} className={s.buttonLink}>
+          <button className={
+            actualTheme.theme === 'light' ? s.button :
+              actualTheme.theme === 'dark' ? s.buttonDark :
+                s.buttonDarkHelloween
+          }>Check it out
+          </button>
+          <button className={
+            actualTheme.theme === 'light' ? s.button :
+              actualTheme.theme === 'dark' ? s.buttonDark :
+                s.buttonDarkHelloween
+          }>
+            <Image src={actualTheme.theme === 'dark' ? githubDark : github} alt='github-link' className={
+              actualTheme.theme === 'light' ? s.githubLight :
+                actualTheme.theme === 'dark' ? s.githubDark :
+                  s.githubDarkHelloween
+            }/>
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }

@@ -1,11 +1,10 @@
 import s from "@/components/Theme/Dropdown List/DropdownList.module.scss";
 import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
-import {TDropdown} from "@/types";
 import Link from "next/link";
 import headerStyle from '../Header/Header.module.scss';
 import listItemStyle from '../Theme/Dropdown List/DropdownList.module.scss';
-import React, {useState} from "react";
+import React from "react";
 
 type TProps = {
   onClick: () => void,

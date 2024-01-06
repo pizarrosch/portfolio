@@ -4,13 +4,23 @@ import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
 import {TDropdown} from "@/types";
 
-export default function DropdownList({isDropdownVisible, setIsDropdownVisible, IsMobileMenuVisible, setIsMobileMenuVisible, topOffset, leftOffset}: TDropdown) {
+export default function DropdownList({
+                                       isDropdownVisible,
+                                       setIsDropdownVisible,
+                                       IsMobileMenuVisible,
+                                       setIsMobileMenuVisible,
+                                       topOffset,
+                                       leftOffset
+                                     }: TDropdown) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();
 
   return (
-    <div style={IsMobileMenuVisible ? {left: `${leftOffset + 150}px`, top: `${topOffset + 70}px`} : {top: '80px', right: '55px'}} className={
+    <div style={IsMobileMenuVisible ? {left: `${leftOffset + 150}px`, top: `${topOffset + 70}px`} : {
+      top: '80px',
+      right: '55px'
+    }} className={
       isDropdownVisible && actualTheme.theme === 'light' ? s.rootVisible :
         isDropdownVisible && actualTheme.theme === 'dark' ? s.rootDarkMode :
           isDropdownVisible && actualTheme.theme === 'darkHelloween' ? s.rootDarkMode : s.rootInvisible}>
