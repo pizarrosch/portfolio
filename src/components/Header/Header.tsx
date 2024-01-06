@@ -26,7 +26,7 @@ export default function Header() {
     return (
         <div className={actualTheme.theme === 'light' ? s.root : s.darkRoot}>
             <Image src={listMenu} alt='list menu cake' className={s.listMenu} onClick={toggleMobileMenuIsVisible} />
-            <DropdownMobile isDropdownVisible={mobileMenuIsVisible} setIsDropdownVisible={setIsVisible} onClick={toggleIsVisible}/>
+            <DropdownMobile isDropdownVisible={mobileMenuIsVisible} onClick={toggleIsVisible}/>
             <nav className={s.navigation}>
                 <Link href='/'>
                     <div className={s.menu}>Home</div>
@@ -39,7 +39,7 @@ export default function Header() {
                 </Link>
                 <ThemeMenuButton onClick={toggleIsVisible}/>
             </nav>
-            <DropdownList isDropdownVisible={isVisible} setIsDropdownVisible={setIsVisible}/>
+            <DropdownList isDropdownVisible={isVisible} setIsDropdownVisible={setIsVisible} setIsMobileMenuVisible={setMobileMenuIsVisible}/>
         </div>
     )
 }

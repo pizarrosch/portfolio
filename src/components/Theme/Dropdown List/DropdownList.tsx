@@ -4,7 +4,7 @@ import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
 import {TDropdown} from "@/types";
 
-export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: TDropdown) {
+export default function DropdownList({isDropdownVisible, setIsDropdownVisible, setIsMobileMenuVisible}: TDropdown) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();
@@ -24,6 +24,7 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
         onClick={() => {
           dispatch(switchTheme('light'));
           setIsDropdownVisible(false);
+          setIsMobileMenuVisible(false);
         }}>
         <span className={s.listItem}>Light</span>
       </div>
@@ -36,6 +37,7 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
         onClick={() => {
           dispatch(switchTheme('dark'));
           setIsDropdownVisible(false);
+          setIsMobileMenuVisible(false);
         }}>
         <span className={s.listItem}>Dark</span>
       </div>
@@ -49,8 +51,8 @@ export default function DropdownList({isDropdownVisible, setIsDropdownVisible}: 
         onClick={() => {
           dispatch(switchTheme('darkHelloween'));
           setIsDropdownVisible(false);
-        }}
-      >
+          setIsMobileMenuVisible(false);
+        }}>
         <span className={s.listItem}>Dark Helloween</span>
       </div>
     </div>

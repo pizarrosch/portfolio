@@ -7,10 +7,11 @@ import headerStyle from '../Header/Header.module.scss';
 import listItemStyle from '../Theme/Dropdown List/DropdownList.module.scss';
 
 type TProps = {
-  onClick: () => void
-} & TDropdown
+  onClick: () => void,
+  isDropdownVisible: boolean,
+}
 
-export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible, onClick}: TProps) {
+export default function DropdownMobile({isDropdownVisible, onClick}: TProps) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();
@@ -19,13 +20,12 @@ export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible,
     <div className={
       isDropdownVisible && actualTheme.theme === 'light' ? listItemStyle.rootVisibleMobile :
         isDropdownVisible && actualTheme.theme === 'dark' ? listItemStyle.rootDarkModeMobile :
-          isDropdownVisible && actualTheme.theme === 'darkHelloween' ? listItemStyle.rootDarkMode : listItemStyle.rootInvisible}>
+          isDropdownVisible && actualTheme.theme === 'darkHelloween' ? listItemStyle.rootDarkModeMobile : listItemStyle.rootInvisible}>
       <div
         className={
-          actualTheme.theme === 'light' ? listItemStyle.chosenItem :
+          actualTheme.theme === 'light' ? listItemStyle.listItemWrapper :
             actualTheme.theme === 'darkHelloween' ? listItemStyle.listItemWrapperHelloween :
-              actualTheme.theme === 'dark' ? listItemStyle.listItemWrapperDark :
-                listItemStyle.listItemWrapper
+              listItemStyle.listItemWrapperDark
         }>
         <span className={s.listItem}>
           <Link href='/'>
@@ -35,9 +35,9 @@ export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible,
       </div>
       <div
         className={
-          actualTheme.theme === 'dark' ? listItemStyle.chosenItemDarkMode :
+          actualTheme.theme === 'light' ? listItemStyle.listItemWrapper :
             actualTheme.theme === 'darkHelloween' ? listItemStyle.listItemWrapperHelloween :
-              actualTheme.theme === 'light' ? listItemStyle.listItemWrapper : listItemStyle.listItemWrapperDark
+              listItemStyle.listItemWrapperDark
         }>
         <span className={listItemStyle.listItem}>
           <Link href='/about'>
@@ -47,10 +47,9 @@ export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible,
       </div>
       <div
         className={
-          actualTheme.theme === 'darkHelloween' ? listItemStyle.chosenItemHelloweenMode :
-            actualTheme.theme === 'dark' ? listItemStyle.listItemWrapperDark :
-              actualTheme.theme === 'light' ? listItemStyle.listItemWrapper :
-                listItemStyle.listItemWrapperHelloween
+          actualTheme.theme === 'light' ? listItemStyle.listItemWrapper :
+            actualTheme.theme === 'darkHelloween' ? listItemStyle.listItemWrapperHelloween :
+              listItemStyle.listItemWrapperDark
         }>
         <span className={listItemStyle.listItem}>
           <Link href='/projects'>
@@ -60,10 +59,9 @@ export default function DropdownMobile({isDropdownVisible, setIsDropdownVisible,
       </div>
       <div
         className={
-          actualTheme.theme === 'darkHelloween' ? listItemStyle.chosenItemHelloweenMode :
-            actualTheme.theme === 'dark' ? listItemStyle.listItemWrapperDark :
-              actualTheme.theme === 'light' ? listItemStyle.listItemWrapper :
-                listItemStyle.listItemWrapperHelloween
+          actualTheme.theme === 'light' ? listItemStyle.listItemWrapper :
+            actualTheme.theme === 'darkHelloween' ? listItemStyle.listItemWrapperHelloween :
+              listItemStyle.listItemWrapperDark
         }>
         <span className={listItemStyle.listItem}>
           <div className={headerStyle.menu} onClick={onClick}>Themes</div>
