@@ -5,13 +5,15 @@ import {TDropdown} from "@/types";
 import Link from "next/link";
 import headerStyle from '../Header/Header.module.scss';
 import listItemStyle from '../Theme/Dropdown List/DropdownList.module.scss';
+import React, {useState} from "react";
 
 type TProps = {
   onClick: () => void,
+  setOffset: (e: React.MouseEvent) => void,
   isDropdownVisible: boolean,
 }
 
-export default function DropdownMobile({isDropdownVisible, onClick}: TProps) {
+export default function DropdownMobile({isDropdownVisible, onClick, setOffset}: TProps) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();
@@ -64,7 +66,11 @@ export default function DropdownMobile({isDropdownVisible, onClick}: TProps) {
               listItemStyle.listItemWrapperDark
         }>
         <span className={listItemStyle.listItem}>
-          <div className={headerStyle.menu} onClick={onClick}>Themes</div>
+          <div className={headerStyle.menu} onClick={(e: React.MouseEvent) => {
+            setOffset(e);
+            onClick();
+          }
+          }>Themes</div>
         </span>
       </div>
     </div>

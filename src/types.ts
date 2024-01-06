@@ -18,6 +18,9 @@ export type TTheme = {
 
 export type TDropdown = {
     isDropdownVisible: boolean,
-    setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
-    setIsMobileMenuVisible: Dispatch<SetStateAction<boolean>>
+    setIsDropdownVisible: Dispatch<SetStateAction<boolean>>,
+    IsMobileMenuVisible: boolean,
+    setIsMobileMenuVisible: Dispatch<SetStateAction<boolean>>,
+    leftOffset: number,
+    topOffset: number
 }

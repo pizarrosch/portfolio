@@ -92,11 +92,17 @@
   color: #252A31;
 }
 
-@media all and (max-width: 430px) {
+@media all and (max-width: 768px) {
   .rootVisibleMobile,
   .rootDarkModeMobile {
     display: flex;
     right: 0;
     width: 150px;
+    top: 80px;
+  }
+
+  .rootVisible,
+  .rootDarkMode {
+    width: 156px;
   }
 }

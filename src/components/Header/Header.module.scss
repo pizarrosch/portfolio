@@ -40,7 +40,7 @@
   color: #DCE0E5;
 }
 
-@media all and (max-width: 430px) {
+@media all and (min-width: 375px) and (max-width: 768px) {
   .root,
   .darkRoot {
     justify-content: flex-start;

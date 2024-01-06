@@ -5,8 +5,13 @@ import pumpkin from '../../../../public/assets/jack-o-lantern-2.png';
 import {useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
 import s from './ThemeMenuButton.module.scss';
+import React from "react";
 
-export default function ThemeMenuButton({onClick}: {onClick: () => void}) {
+type TProps = {
+  onClick: () => void
+}
+
+export default function ThemeMenuButton({onClick}: TProps) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
 

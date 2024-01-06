@@ -46,7 +46,27 @@
   background-color: #404854;
 }
 
-@media all and (max-width: 430px) {
+@media all and (max-width: 400px) {
+  .root {
+
+    .greetingsTitle,
+    .greetingsTitleDarkTheme
+    {
+      font-size: 34px;
+      font-weight: 500;
+    }
+
+    .greetingsParagraph,
+    .greetingsParagraphDarkTheme
+    {
+      font-size: 20px;
+      font-weight: 300;
+      width: 300px;
+    }
+  }
+}
+
+@media all and (min-width: 401px) and (max-width: 430px) {
   .root {
 
     .greetingsTitle,
