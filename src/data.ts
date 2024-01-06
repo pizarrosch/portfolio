@@ -13,7 +13,8 @@ export const pjItemsData = [
     title: 'Todo list',
     description: 'My first React project. A quite simple todo list has been a challenge in the beginning. ' +
       'But it also has been a great opportunity to get to know React',
-    url: 'https://react-todo-list-ten-cyan.vercel.app/'
+    url: 'https://react-todo-list-ten-cyan.vercel.app/',
+    githubUrl: 'https://github.com/pizarrosch/react-todo-list'
   },
   {
     id: 1,
@@ -21,7 +22,8 @@ export const pjItemsData = [
     title: 'Weather Widget',
     description: `The weather app, where you can check the actual weather all over the world as well as the weather for the next 5 days.
                   Written in React as well, it was my first project where I worked with API (openweather.com)`,
-    url: 'https://weather-widget-sf.vercel.app/'
+    url: 'https://weather-widget-sf.vercel.app/',
+    githubUrl: 'https://github.com/pizarrosch/weather-widget-sf'
   },
   {
     id: 2,
@@ -29,14 +31,16 @@ export const pjItemsData = [
     title: 'Book Store',
     description: `Book store page was my first connection to NextJS. In order to add books to the cart you must log in. 
                   Just use 'shomakhov@skillfactory.ru' as login and 'Zaurskillfactory' as password`,
-    url: 'https://book-store-nextjs-j4n9voyji-pizarrosch.vercel.app/'
+    url: 'https://book-store-nextjs-j4n9voyji-pizarrosch.vercel.app/',
+    githubUrl: 'https://github.com/pizarrosch/book-store-nextjs-sf'
   },
   {
     id: 3,
     src: kanbanPjImg,
     title: 'Kanban Board',
     description: 'The popular kanban board, where different tasks can be managed',
-    url: 'https://kanban-board-sf.vercel.app/dashboard'
+    url: 'https://kanban-board-sf.vercel.app/dashboard',
+    githubUrl: 'https://github.com/pizarrosch/kanban-board-sf'
   },
   {
     id: 4,
@@ -47,6 +51,7 @@ export const pjItemsData = [
                   Institution, only the companies on the territory of Russian Federation can be looked for, e.g. Lukoil, Sberbank, etc.
                   Nevertheless, I think this project can also shed some light on my actual developer skills.
                   Login data are required on this page. Login: sf_student8, password: 5QB0KM/`,
-    url: 'https://diploma-project-skillfactory-react.vercel.app/dashboard'
+    url: 'https://diploma-project-skillfactory-react.vercel.app/dashboard',
+    githubUrl: 'https://github.com/pizarrosch/diploma-project-skillfactory-react'
   }
 ]

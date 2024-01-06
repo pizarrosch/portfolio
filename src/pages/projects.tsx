@@ -29,7 +29,7 @@ export default function Projects() {
         <Image src={leftArrow} alt='' className={slideIndex > 0 ? s.arrowLeftActive : s.arrowLeftInactive}
                onClick={onLeftClick}/>
         <ProjectItem src={pjItemsData[slideIndex].src} title={pjItemsData[slideIndex].title}
-                     description={pjItemsData[slideIndex].description} url={pjItemsData[slideIndex].url}/>
+                     description={pjItemsData[slideIndex].description} url={pjItemsData[slideIndex].url} gitHubUrl={pjItemsData[slideIndex].githubUrl}/>
         <Image src={leftArrow} alt=''
                className={slideIndex === pjItemsData.length - 1 ? s.arrowRightInactive : s.arrowRightActive}
                onClick={onRightClick}/>

@@ -46,292 +46,287 @@
   }
 
   .buttonContainer {
+    position: absolute;
+    bottom: -25px;
     display: flex;
-    justify-content: center;
+    gap: 20px;
 
-    .buttonLink {
-      position: absolute;
-      bottom: -25px;
-      display: flex;
-      gap: 20px;
+    .button,
+    .buttonDark,
+    .buttonDarkHelloween,
+    {
+      width: 150px;
+      height: 50px;
+      border-radius: 8px;
+      background-color: #6909a3;
+      color: white;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: 200;
+    }
 
-      .button,
-      .buttonDark,
-      .buttonDarkHelloween,
-      {
-        width: 150px;
-        height: 50px;
-        border-radius: 8px;
-        background-color: #6909a3;
-        color: white;
-        border: none;
+    .buttonDark {
+      background-color: #F6F7F9;
+      color: #404854;
+    }
+
+    .buttonDarkHelloween,
+    {
+      background-color: #EB6847;
+      color: #F6F7F9;
+    }
+
+    .githubLight,
+    .githubDark,
+    .githubDarkHelloween {
+      width: 32px;
+      height: 32px;
+    }
+
+    .buttonDark:hover,
+    .button:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+  @media all and (min-width: 320px) and (max-width: 425px) {
+    .root {
+      justify-content: flex-start;
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .imageWrapper,
+      .imageWrapperDark {
+        width: 98%;
+        height: 163px;
+
+        .pjImage {
+          width: initial;
+        }
+      }
+
+      .description,
+      .descriptionDark {
+        font-size: 18px;
+        width: 310px;
+      }
+
+      .buttonContainer {
+        .buttonLink {
+          position: initial;
+
+          .button,
+          .buttonDark,
+          .buttonDarkHelloween {
+            width: 140px;
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: 426px) and (max-width: 500px) {
+    .root {
+      justify-content: flex-start;
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .imageWrapper,
+      .imageWrapperDark {
+        width: 96%;
+        height: 183px;
+
+        .pjImage {
+          width: initial;
+        }
+      }
+
+      .description,
+      .descriptionDark {
+        font-size: 18px;
+        width: 410px;
+      }
+
+      .buttonContainer {
+        .buttonLink {
+          position: initial;
+
+          .button,
+          .buttonDark,
+          .buttonDarkHelloween {
+            width: 140px;
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: 501px) and (max-width: 600px) {
+    .root {
+      justify-content: flex-start;
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .imageWrapper,
+      .imageWrapperDark {
+        width: 96%;
+        height: 200px;
+
+        .pjImage {
+          width: initial;
+        }
+      }
+
+      .description,
+      .descriptionDark {
         font-size: 20px;
-        cursor: pointer;
-        font-weight: 200;
+        width: 490px;
       }
 
-      .buttonDark {
-        background-color: #F6F7F9;
-        color: #404854;
-      }
+      .buttonContainer {
+        .buttonLink {
+          position: initial;
 
-      .buttonDarkHelloween,
-      {
-        background-color: #EB6847;
-        color: #F6F7F9;
-      }
-
-      .githubLight,
-      .githubDark,
-      .githubDarkHelloween {
-        width: 32px;
-        height: 32px;
-      }
-
-      .buttonDark:hover,
-      .button:hover {
-        opacity: 0.8;
-      }
-    }
-  }
-}
-
-@media all and (min-width: 320px) and (max-width: 425px) {
-  .root {
-    justify-content: flex-start;
-
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .imageWrapper,
-    .imageWrapperDark {
-      width: 98%;
-      height: 163px;
-
-      .pjImage {
-        width: initial;
-      }
-    }
-
-    .description,
-    .descriptionDark {
-      font-size: 18px;
-      width: 310px;
-    }
-
-    .buttonContainer {
-      .buttonLink {
-        position: initial;
-
-        .button,
-        .buttonDark,
-        .buttonDarkHelloween {
-          width: 140px;
+          .button,
+          .buttonDark,
+          .buttonDarkHelloween {
+            width: 140px;
+          }
         }
       }
     }
   }
-}
 
-@media all and (min-width: 426px) and (max-width: 500px) {
-  .root {
-    justify-content: flex-start;
+  @media all and (min-width: 601px) and (max-width: 700px) {
+    .root {
+      justify-content: flex-start;
 
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .imageWrapper,
-    .imageWrapperDark {
-      width: 96%;
-      height: 183px;
-
-      .pjImage {
-        width: initial;
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-    }
 
-    .description,
-    .descriptionDark {
-      font-size: 18px;
-      width: 410px;
-    }
+      .imageWrapper,
+      .imageWrapperDark {
+        width: 96%;
+        height: 230px;
 
-    .buttonContainer {
-      .buttonLink {
-        position: initial;
+        .pjImage {
+          width: initial;
+        }
+      }
 
-        .button,
-        .buttonDark,
-        .buttonDarkHelloween {
-          width: 140px;
+      .description,
+      .descriptionDark {
+        font-size: 20px;
+        width: 590px;
+      }
+
+      .buttonContainer {
+        .buttonLink {
+          position: initial;
+
+          .button,
+          .buttonDark,
+          .buttonDarkHelloween {
+            width: 140px;
+          }
         }
       }
     }
   }
-}
 
-@media all and (min-width: 501px) and (max-width: 600px) {
-  .root {
-    justify-content: flex-start;
+  @media all and (min-width: 701px) and (max-width: 800px) {
+    .root {
+      justify-content: flex-start;
 
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .imageWrapper,
-    .imageWrapperDark {
-      width: 96%;
-      height: 200px;
-
-      .pjImage {
-        width: initial;
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-    }
 
-    .description,
-    .descriptionDark {
-      font-size: 20px;
-      width: 490px;
-    }
+      .imageWrapper,
+      .imageWrapperDark {
+        width: 90%;
+        height: 260px;
 
-    .buttonContainer {
-      .buttonLink {
-        position: initial;
+        .pjImage {
+          width: initial;
+        }
+      }
 
-        .button,
-        .buttonDark,
-        .buttonDarkHelloween {
-          width: 140px;
+      .description,
+      .descriptionDark {
+        font-size: 20px;
+        width: 690px;
+      }
+
+      .buttonContainer {
+        .buttonLink {
+          position: initial;
+
+          .button,
+          .buttonDark,
+          .buttonDarkHelloween {
+            width: 140px;
+          }
         }
       }
     }
   }
-}
 
-@media all and (min-width: 601px) and (max-width: 700px) {
-  .root {
-    justify-content: flex-start;
+  @media all and (min-width: 801px) and (max-width: 1023px) {
+    .root {
+      justify-content: flex-start;
 
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .imageWrapper,
-    .imageWrapperDark {
-      width: 96%;
-      height: 230px;
-
-      .pjImage {
-        width: initial;
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-    }
 
-    .description,
-    .descriptionDark {
-      font-size: 20px;
-      width: 590px;
-    }
+      .imageWrapper,
+      .imageWrapperDark {
+        width: 85%;
+        height: 290px;
 
-    .buttonContainer {
-      .buttonLink {
-        position: initial;
+        .pjImage {
+          width: initial;
+        }
+      }
 
-        .button,
-        .buttonDark,
-        .buttonDarkHelloween {
-          width: 140px;
+      .description,
+      .descriptionDark {
+        font-size: 20px;
+        width: 790px;
+      }
+
+      .buttonContainer {
+        .buttonLink {
+          position: initial;
+
+          .button,
+          .buttonDark,
+          .buttonDarkHelloween {
+            width: 140px;
+          }
         }
       }
     }
   }
-}
-
-@media all and (min-width: 701px) and (max-width: 800px) {
-  .root {
-    justify-content: flex-start;
-
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .imageWrapper,
-    .imageWrapperDark {
-      width: 90%;
-      height: 260px;
-
-      .pjImage {
-        width: initial;
-      }
-    }
-
-    .description,
-    .descriptionDark {
-      font-size: 20px;
-      width: 690px;
-    }
-
-    .buttonContainer {
-      .buttonLink {
-        position: initial;
-
-        .button,
-        .buttonDark,
-        .buttonDarkHelloween {
-          width: 140px;
-        }
-      }
-    }
-  }
-}
-
-@media all and (min-width: 801px) and (max-width: 1023px) {
-  .root {
-    justify-content: flex-start;
-
-    .textContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .imageWrapper,
-    .imageWrapperDark {
-      width: 85%;
-      height: 290px;
-
-      .pjImage {
-        width: initial;
-      }
-    }
-
-    .description,
-    .descriptionDark {
-      font-size: 20px;
-      width: 790px;
-    }
-
-    .buttonContainer {
-      .buttonLink {
-        position: initial;
-
-        .button,
-        .buttonDark,
-        .buttonDarkHelloween {
-          width: 140px;
-        }
-      }
-    }
-  }
-}

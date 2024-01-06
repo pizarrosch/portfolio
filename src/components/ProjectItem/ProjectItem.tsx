@@ -7,7 +7,7 @@ import {RootState} from "@/redux/store";
 import github from '../../../public/assets/github-mark-white.svg';
 import githubDark from '../../../public/assets/github-mark.svg';
 
-export default function ProjectItem({src, title, description, url}: TProject) {
+export default function ProjectItem({src, title, description, url, gitHubUrl}: TProject) {
 
   const actualTheme = useAppSelector((state: RootState) => state.theme);
 
@@ -28,6 +28,8 @@ export default function ProjectItem({src, title, description, url}: TProject) {
                 s.buttonDarkHelloween
           }>Check it out
           </button>
+        </Link>
+        <Link href={gitHubUrl ? gitHubUrl : ''} target={gitHubUrl ? "_blank" : ''} className={s.buttonLink}>
           <button className={
             actualTheme.theme === 'light' ? s.button :
               actualTheme.theme === 'dark' ? s.buttonDark :
