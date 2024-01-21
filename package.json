@@ -12,6 +12,7 @@
     "@reduxjs/toolkit": "^1.9.7",
     "@tsparticles/preset-confetti": "^3.0.0",
     "@tsparticles/react": "^3.0.0",
+    "antd": "^5.13.1",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
