@@ -30,7 +30,7 @@ export default function Home() {
               token: {
                 colorPrimary:
                   actualTheme.theme === 'dark' ? '#F6F7F9' :
-                    actualTheme.theme === 'light' ? '#BD6BBD' :
+                    actualTheme.theme === 'light' ? '#6909a3' :
                       '#FF9980'
               },
               components: {
@@ -39,7 +39,8 @@ export default function Home() {
                     actualTheme.theme === 'dark' && activationStatus.active ? '#383E47' :
                       actualTheme.theme === 'dark' && !activationStatus.active ? '#F6F7F9' :
                         actualTheme.theme === 'darkHelloween' && activationStatus.active ? '#383E47' :
-                          actualTheme.theme === 'light' ? '#F6F7F9' : '#FF9980'
+                          actualTheme.theme === 'light' ? '#F6F7F9' : '#FF9980',
+                  colorBorder: 'white'
                 }
               }
             }}

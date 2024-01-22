@@ -70,7 +70,9 @@ export default function About() {
             actualTheme.theme === 'darkHelloween' ? s.titleHelloween :
               actualTheme.theme === 'dark' ? s.titleDark : s.title
           }>Certificate</h1>
-          <Image src={certificate} alt='' className={s.certificate}/>
+          <a target='_blank' href={certificate.src}>
+            <Image src={certificate} alt='' className={s.certificate}/>
+          </a>
         </div>
       </div>
     </Layout>

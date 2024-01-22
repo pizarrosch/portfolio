@@ -3,6 +3,7 @@ import {switchTheme} from "@/redux/slices/themeSlice";
 import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
 import {TDropdown} from "@/types";
+import React, {useEffect, useRef, useState} from "react";
 
 export default function DropdownList({
                                        isDropdownVisible,
@@ -16,14 +17,19 @@ export default function DropdownList({
   const actualTheme = useAppSelector((state: RootState) => state.theme);
   const dispatch = useAppDispatch();
 
+  const [isMenuClosed, setIsMenuClosed] = useState(true);
+
   return (
-    <div style={IsMobileMenuVisible ? {left: `${leftOffset + 150}px`, top: `${topOffset + 70}px`} : {
+    <div
+      style={IsMobileMenuVisible ? {left: `${leftOffset + 150}px`, top: `${topOffset + 70}px`} : {
       top: '80px',
-      right: '55px'
-    }} className={
+      right: '38px'
+    }}
+      className={
       isDropdownVisible && actualTheme.theme === 'light' ? s.rootVisible :
         isDropdownVisible && actualTheme.theme === 'dark' ? s.rootDarkMode :
-          isDropdownVisible && actualTheme.theme === 'darkHelloween' ? s.rootDarkMode : s.rootInvisible}>
+          isDropdownVisible && actualTheme.theme === 'darkHelloween' ? s.rootDarkMode : s.rootInvisible}
+    >
       <div
         className={
           actualTheme.theme === 'light' ? s.chosenItem :

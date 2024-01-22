@@ -23,17 +23,36 @@
     width: 400px;
     margin-right: 30px;
 
-    .menu {
+    .menu,
+    .darkMenu,
+    .darkHelloweenMenu {
       cursor: pointer;
       transition: 200ms ease-in-out;
+      padding: 15px;
+      box-sizing: border-box;
     }
   }
 
-  .menu:hover {
-    color: #6909a3;
-    height: 19px;
+  .menu:hover,
+  .darkMenu:hover,
+  .darkHelloweenMenu:hover {
+    background-color: #6909a3;
     transition: 200ms ease-in-out;
     box-sizing: border-box;
+  }
+
+  .menu:hover {
+    color: floralwhite;
+  }
+
+  .darkMenu:hover {
+    background-color: #DCE0E5;
+    color: #252A31;
+  }
+
+  .darkHelloweenMenu:hover {
+    background-color: #FF9980;
+    color: #252A31;
   }
 }
 
@@ -49,8 +68,7 @@
 
     .listMenu,
     .listMenuDark,
-    .listMenuHelloween
-    {
+    .listMenuHelloween {
       display: block;
       margin-left: 30px;
     }

@@ -44,14 +44,26 @@ export default function Header() {
       }/>
       <DropdownMobile isDropdownVisible={mobileMenuIsVisible} onClick={toggleIsVisible} setOffset={setOffset}/>
       <nav className={s.navigation}>
-        <Link href='/'>
-          <div className={s.menu}>Home</div>
+        <Link href='/' >
+          <div className={
+            actualTheme.theme === 'dark' ? s.darkMenu :
+              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
+            s.menu
+          }>Home</div>
         </Link>
         <Link href='/about'>
-          <div className={s.menu}>About</div>
+          <div className={
+            actualTheme.theme === 'dark' ? s.darkMenu :
+              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
+                s.menu
+          }>About</div>
         </Link>
         <Link href='/projects'>
-          <div className={s.menu}>Projects</div>
+          <div className={
+            actualTheme.theme === 'dark' ? s.darkMenu :
+              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
+                s.menu
+          }>Projects</div>
         </Link>
         <ThemeMenuButton onClick={toggleIsVisible}/>
       </nav>
