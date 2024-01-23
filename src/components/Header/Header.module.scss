@@ -24,12 +24,37 @@
 
     .menu,
     .darkMenu,
-    .darkHelloweenMenu {
+    .darkHelloweenMenu,
+    .menuChosen,
+    .darkMenuChosen,
+    .darkHelloweenMenuChosen
+    {
       cursor: pointer;
       transition: 200ms ease-in-out;
       padding: 15px;
       box-sizing: border-box;
       border-radius: 5px;
+    }
+
+    .menuChosen {
+      background-color: #6909a3;
+      color: floralwhite;
+    }
+
+    .darkMenuChosen {
+      background-color: #DCE0E5;
+      color: #252A31;
+    }
+
+    .darkHelloweenMenuChosen {
+      background-color: #FF9980;
+      color: #252A31;
+    }
+
+    .menuChosen:hover,
+    .darkMenuChosen:hover,
+    .darkHelloweenMenuChosen:hover {
+      opacity: 0.7;
     }
   }
 

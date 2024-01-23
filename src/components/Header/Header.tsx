@@ -8,8 +8,8 @@ import {RootState} from "@/redux/store";
 import listMenu from '../../../public/assets/list menu.png';
 import Image from "next/image";
 import DropdownMobile from "@/components/DropdownMobile/DropdownMobile";
-import {setNavItem} from "@/redux/slices/navigationItemSlice";
 import {useRouter} from "next/navigation";
+import {useRouter as useRouteAddress} from 'next/router';
 
 export default function Header() {
 
@@ -20,6 +20,7 @@ export default function Header() {
   const actualTheme = useAppSelector((state: RootState) => state.theme);
 
   const router = useRouter();
+  const routerAddress = useRouteAddress();
 
   function toggleIsVisible() {
     setIsVisible(prev => !prev);
@@ -50,24 +51,27 @@ export default function Header() {
       <nav className={s.navigation}>
         <Link href='/' onClick={() => router.push('/')}>
           <div className={
-            actualTheme.theme === 'dark' ? s.darkMenu :
-              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
+            actualTheme.theme === 'dark' ? routerAddress.pathname === '/' ? s.darkMenuChosen : s.darkMenu :
+              actualTheme.theme === 'darkHelloween' ? routerAddress.pathname === '/' ? s.darkHelloweenMenuChosen : s.darkHelloweenMenu :
+                routerAddress.pathname === '/' ? s.menuChosen :
                 s.menu
           }>Home
           </div>
         </Link>
         <Link href='/about' onClick={() => router.push('/about')}>
           <div className={
-            actualTheme.theme === 'dark' ? s.darkMenu :
-              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
+            actualTheme.theme === 'dark' ? routerAddress.pathname === '/about' ? s.darkMenuChosen : s.darkMenu :
+              actualTheme.theme === 'darkHelloween' ? routerAddress.pathname === '/about' ? s.darkHelloweenMenuChosen : s.darkHelloweenMenu :
+                routerAddress.pathname === '/about' ? s.menuChosen :
                 s.menu
           }>About
           </div>
         </Link>
         <Link href='/projects' onClick={() => router.push('/projects')}>
           <div className={
-            actualTheme.theme === 'dark' ? s.darkMenu :
-              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
+            actualTheme.theme === 'dark' ? routerAddress.pathname === '/projects' ? s.darkMenuChosen : s.darkMenu :
+              actualTheme.theme === 'darkHelloween' ? routerAddress.pathname === '/projects' ? s.darkHelloweenMenuChosen : s.darkHelloweenMenu :
+                routerAddress.pathname === '/projects' ? s.menuChosen :
                 s.menu
           }>Projects
           </div>
