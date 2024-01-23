@@ -1,5 +1,8 @@
 .root,
-.darkRoot {
+.darkRoot,
+.homeRoot,
+.darkHomeRoot
+{
   background-color: #eeeeee;
   align-items: center;
   box-sizing: border-box;
@@ -7,8 +10,17 @@
   gap: 25px;
   height: 100px;
   justify-content: flex-end;
-  padding-right: 30px;
+  padding-right: 80px;
   width: 100%;
+
+  .switcherContainer {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    gap: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    }
 
   .image,
   .x_ixon,
@@ -34,55 +46,70 @@
     border-radius: 50%;
   }
 
-  .githubIconWrapper {
-    position: relative;
+  .iconsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
 
-    .imageBackdropGithub {
-      position: absolute;
-      right: 1px;
-      bottom: 5px;
+    .githubIconWrapper {
+      position: relative;
+
+      .imageBackdropGithub {
+        position: absolute;
+        right: 1px;
+        bottom: 5px;
+      }
     }
-  }
 
-  .linkedInIconWrapper {
-    position: relative;
+    .linkedInIconWrapper {
+      position: relative;
 
-    .imageBackdropLinkedIn {
-      position: absolute;
-      right: 1px;
-      bottom: 5px;
+      .imageBackdropLinkedIn {
+        position: absolute;
+        right: 1px;
+        bottom: 5px;
+      }
     }
-  }
 
-  .facebookIconWrapper {
-    position: relative;
+    .facebookIconWrapper {
+      position: relative;
 
-    .imageBackdropFacebook {
-      position: absolute;
-      right: 1px;
-      bottom: 5px;
+      .imageBackdropFacebook {
+        position: absolute;
+        right: 1px;
+        bottom: 5px;
+      }
     }
-  }
 
-  .instagramIconWrapper {
-    position: relative;
+    .instagramIconWrapper {
+      position: relative;
 
-    .imageBackdropInstagram {
-      position: absolute;
-      right: 1px;
-      bottom: 5px;
+      .imageBackdropInstagram {
+        position: absolute;
+        right: 1px;
+        bottom: 5px;
+      }
     }
-  }
 
-  .x_ixon {
-    background-color: black;
-    border-radius: 50%;
-    box-sizing: border-box;
-    padding: 6px;
+    .x_ixon {
+      background-color: black;
+      border-radius: 50%;
+      box-sizing: border-box;
+      padding: 6px;
+    }
   }
 }
 
-.darkRoot {
+.homeRoot,
+.darkHomeRoot
+{
+  justify-content: space-between;
+  padding: 0 80px 0 30px;
+}
+
+.darkRoot,
+.darkHomeRoot
+{
   background-color: #383E47;
   color: #DCE0E5;
 }
@@ -92,6 +119,10 @@
   .darkRoot {
     justify-content: center;
     padding-right: 0;
+
+    .switcherContainer {
+      display: none;
+    }
   }
 }
 

@@ -3,11 +3,13 @@ import Link from "next/link";
 import ThemeMenuButton from "@/components/Theme/Theme Menu Button/ThemeMenuButton";
 import DropdownList from "@/components/Theme/Dropdown List/DropdownList";
 import React, {MouseEventHandler, useEffect, useState} from "react";
-import {useAppSelector} from "@/hooks/hooks";
+import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
 import listMenu from '../../../public/assets/list menu.png';
 import Image from "next/image";
 import DropdownMobile from "@/components/DropdownMobile/DropdownMobile";
+import {setNavItem} from "@/redux/slices/navigationItemSlice";
+import {useRouter} from "next/navigation";
 
 export default function Header() {
 
@@ -16,6 +18,8 @@ export default function Header() {
   const [leftOffset, setLeftOffset] = useState(0);
   const [topOffset, setTopOffset] = useState(0);
   const actualTheme = useAppSelector((state: RootState) => state.theme);
+
+  const router = useRouter();
 
   function toggleIsVisible() {
     setIsVisible(prev => !prev);
@@ -38,36 +42,40 @@ export default function Header() {
           actualTheme.theme === 'darkHelloween' ? s.listMenuHelloween :
             s.listMenu
       } onClick={() => {
-          toggleMobileMenuIsVisible();
-          setIsVisible(false);
-        }
+        toggleMobileMenuIsVisible();
+        setIsVisible(false);
+      }
       }/>
       <DropdownMobile isDropdownVisible={mobileMenuIsVisible} onClick={toggleIsVisible} setOffset={setOffset}/>
       <nav className={s.navigation}>
-        <Link href='/' >
-          <div className={
-            actualTheme.theme === 'dark' ? s.darkMenu :
-              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
-            s.menu
-          }>Home</div>
-        </Link>
-        <Link href='/about'>
+        <Link href='/' onClick={() => router.push('/')}>
           <div className={
             actualTheme.theme === 'dark' ? s.darkMenu :
               actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
                 s.menu
-          }>About</div>
+          }>Home
+          </div>
         </Link>
-        <Link href='/projects'>
+        <Link href='/about' onClick={() => router.push('/about')}>
           <div className={
             actualTheme.theme === 'dark' ? s.darkMenu :
               actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
                 s.menu
-          }>Projects</div>
+          }>About
+          </div>
+        </Link>
+        <Link href='/projects' onClick={() => router.push('/projects')}>
+          <div className={
+            actualTheme.theme === 'dark' ? s.darkMenu :
+              actualTheme.theme === 'darkHelloween' ? s.darkHelloweenMenu :
+                s.menu
+          }>Projects
+          </div>
         </Link>
         <ThemeMenuButton onClick={toggleIsVisible}/>
       </nav>
-      <DropdownList isDropdownVisible={isVisible} setIsDropdownVisible={setIsVisible} IsMobileMenuVisible={mobileMenuIsVisible}
+      <DropdownList isDropdownVisible={isVisible} setIsDropdownVisible={setIsVisible}
+                    IsMobileMenuVisible={mobileMenuIsVisible}
                     setIsMobileMenuVisible={setMobileMenuIsVisible} leftOffset={leftOffset} topOffset={topOffset}/>
     </div>
   )
