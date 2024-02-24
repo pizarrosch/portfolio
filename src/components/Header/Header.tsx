@@ -2,7 +2,7 @@ import s from './Header.module.scss';
 import Link from "next/link";
 import ThemeMenuButton from "@/components/Theme/Theme Menu Button/ThemeMenuButton";
 import DropdownList from "@/components/Theme/Dropdown List/DropdownList";
-import React, {MouseEventHandler, useEffect, useState} from "react";
+import React, {MouseEventHandler, useEffect, useRef, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
 import listMenu from '../../../public/assets/list menu.png';
@@ -80,7 +80,7 @@ export default function Header() {
       </nav>
       <DropdownList isDropdownVisible={isVisible} setIsDropdownVisible={setIsVisible}
                     IsMobileMenuVisible={mobileMenuIsVisible}
-                    setIsMobileMenuVisible={setMobileMenuIsVisible} leftOffset={leftOffset} topOffset={topOffset}/>
+                    setIsMobileMenuVisible={setMobileMenuIsVisible} leftOffset={leftOffset} topOffset={topOffset} />
     </div>
   )
 }

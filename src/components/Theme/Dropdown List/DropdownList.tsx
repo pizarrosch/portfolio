@@ -18,6 +18,7 @@ export default function DropdownList({
   const dispatch = useAppDispatch();
 
   const [isMenuClosed, setIsMenuClosed] = useState(true);
+  const ref = useRef(null);
 
   return (
     <div
