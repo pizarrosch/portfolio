@@ -7,6 +7,7 @@ import Skills from "@/components/Skills/Skills";
 import {SKILLS} from "@/data";
 import {useAppSelector} from "@/hooks/hooks";
 import {RootState} from "@/redux/store";
+import {TSkills} from "@/types";
 
 export default function About() {
 
@@ -24,7 +25,7 @@ export default function About() {
             }>About me</span>
             <article className={s.article}>
               <p>
-                My name is Zaur. I am a chemist who one day wanted to change his profession to that of a frontend
+                My name is Zaur. I am a graduated chemist who one day wanted to change his profession to that of a frontend
                 developer and realized one day he will stay a programmer for life.
               </p>
               <p>
@@ -45,7 +46,7 @@ export default function About() {
                 actualTheme.theme === 'dark' ? s.titleDark : s.title
             }>My skills:</span>
             <div className={s.skillsContainer}>
-              {SKILLS.map((skill: string, id: number) => {
+              {SKILLS.map((skill: TSkills, id: number) => {
                 return (
                   <Skills skill={skill} key={id}/>
                 )
@@ -57,12 +58,12 @@ export default function About() {
               actualTheme.theme === 'darkHelloween' ? s.titleHelloween :
                 actualTheme.theme === 'dark' ? s.titleDark : s.title
             }>My languages:</span>
-            <div className={s.langSkillsContainer}>
-              <Skills skill='English - fluent'/>
-              <Skills skill='German - fluent'/>
-              <Skills skill='Spanish - basics'/>
-              <Skills skill='Russian - mother tongue'/>
-            </div>
+            {/*<div className={s.langSkillsContainer}>*/}
+            {/*  <Skills skill='English - fluent'/>*/}
+            {/*  <Skills skill='German - fluent'/>*/}
+            {/*  <Skills skill='Spanish - basics'/>*/}
+            {/*  <Skills skill='Russian - mother tongue'/>*/}
+            {/*</div>*/}
           </div>
         </div>
         <div className={s.certificateWrapper}>

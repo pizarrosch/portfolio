@@ -3,8 +3,29 @@ import kanbanPjImg from '../public/assets/kanban-board.png';
 import weatherWidgetPjImg from '../public/assets/weatherReactPj.png';
 import todoListImg from '../public/assets/todoReactPj.png';
 import diplomaPjImg from '../public/assets/diploma-pj-screenshot.png';
+import {TSkills} from "@/types";
+import IconJS from "@/components/Icon/IconJS";
+import IconSass from "@/components/Icon/IconSass";
 
-export const SKILLS = ['HTML/CSS', 'SASS/SCSS', 'Typescript', 'JavaScript', 'Webstorm', 'React', 'NextJS', 'NodeJS', 'Redux', 'GitHub', 'Webpack', 'Express', 'jQuery', 'Cypress', 'Linux', 'Bash', 'SQL', 'npm', 'git', 'ssh', 'jest'];
+export const SKILLS: TSkills[] = [
+  {
+    icon: IconJS,
+    title: 'HTML/CSS'
+  },
+  {
+    icon: IconSass,
+    title: 'HTML/CSS'
+  },
+  // {
+  //   img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
+  //   title: 'SASS/SCSS'
+  // },
+  // {
+  //   img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+  //   title: 'Typescript'
+  // }
+]
+  // ['HTML/CSS', 'SASS/SCSS', 'Typescript', 'JavaScript', 'Webstorm', 'React', 'NextJS', 'NodeJS', 'Redux', 'GitHub', 'Webpack', 'Express', 'jQuery', 'Cypress', 'Linux', 'Bash', 'SQL', 'npm', 'git', 'ssh', 'jest'];
 
 export const pjItemsData = [
   {

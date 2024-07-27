@@ -1,5 +1,5 @@
 import {StaticImageData} from "next/image";
-import {Dispatch, SetStateAction} from "react";
+import {Dispatch, ReactElement, ReactNode, SetStateAction} from "react";
 
 export type TShowStatus = {
     active: boolean;
@@ -24,4 +24,9 @@ export type TDropdown = {
     setIsMobileMenuVisible: Dispatch<SetStateAction<boolean>>,
     leftOffset: number,
     topOffset: number
+}
+
+export type TSkills = {
+    icon: () => ReactElement,
+    title: string
 }
