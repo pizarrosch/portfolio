@@ -1,4 +1,6 @@
 import React from 'react';
+import {useAppSelector} from "@/hooks/hooks";
+import {RootState} from "@/redux/store";
 
 export function IconHTML() {
   return (
@@ -14,17 +16,20 @@ export function IconHTML() {
 }
 
 export function IconCSS() {
+
+  const actualTheme = useAppSelector((state: RootState) => state.theme);
+
   return (
     <svg viewBox="0 0 128 128">
-      <path fill="#EBEBEB" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
-      <path fill="#fff" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
-      <path fill="#33A9DC"
+      <path fill={actualTheme.theme==='light' ? "#1572B6" : "#EBEBEB"} d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
+      <path fill= {actualTheme.theme==='light' ? "#33A9DC" : "#fff"} d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
+      <path fill={actualTheme.theme==='dark' ? "#33A9DC" : "#fff"}
             d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"></path>
-      <path fill="#1572B6"
+      <path fill={actualTheme.theme==='dark' ? "#1572B6" : "#EBEBEB"}
             d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path>
-      <path fill="#33A9DC"
+      <path fill={actualTheme.theme==='dark' ? "#33A9DC" : "#fff"}
             d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path>
-      <path fill="#1572B6"
+      <path fill={actualTheme.theme==='dark' ? "#1572B6" : "#EBEBEB"}
             d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
     </svg>
   )
@@ -71,11 +76,38 @@ export function IconReact() {
   )
 }
 
-// export function IconJS() {
-// }
-//
-// export function IconJS() {
-// }
+export function IconNextJS() {
+  return (
+    <svg viewBox="0 0 128 128">
+      <circle cx="64" cy="64" r="64"></circle>
+      <path fill="url(#a)"
+            d="M106.317 112.014 49.167 38.4H38.4v51.179h8.614v-40.24l52.54 67.884a64.216 64.216 0 0 0 6.763-5.209z"></path>
+      <path fill="url(#b)" d="M81.778 38.4h8.533v51.2h-8.533z"></path>
+      <defs>
+        <linearGradient id="a" x1="109" x2="144.5" y1="116.5" y2="160.5" gradientTransform="scale(.71111)"
+                        gradientUnits="userSpaceOnUse">
+          <stop stop-color="#fff"></stop>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="b" x1="121" x2="120.799" y1="54" y2="106.875" gradientTransform="scale(.71111)"
+                        gradientUnits="userSpaceOnUse">
+          <stop stop-color="#fff"></stop>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  )
+}
+
+export function IconRedux() {
+  return (
+    <svg viewBox="0 0 128 128">
+      <path fill="#764abc"
+            d="M88.69 88.11c-9 18.4-24.76 30.78-45.61 34.85a39.73 39.73 0 0 1-9.77 1.14c-12 0-23-5-28.34-13.19C-2.2 100-4.64 76.87 19 59.76c.48 2.61 1.46 6.19 2.11 8.31A38.24 38.24 0 0 0 10 81.1c-4.4 8.64-3.91 17.27 1.3 25.25 3.6 5.38 9.3 8.65 16.63 9.65a44 44 0 0 0 26.55-5c12.71-6.68 21.18-14.66 26.72-25.57a9.32 9.32 0 0 1-2.61-6A9.12 9.12 0 0 1 87.37 70h.34a9.15 9.15 0 0 1 1 18.25zm28.67-20.2c12.21 13.84 12.54 30.13 7.82 39.58-4.4 8.63-16 17.27-31.6 17.27a50.48 50.48 0 0 1-21-5.05c2.29-1.63 5.54-4.24 7.33-5.87a41.54 41.54 0 0 0 16 3.42c10.1 0 17.75-4.72 22.31-13.35 2.93-5.7 3.1-12.38.33-19.22a43.61 43.61 0 0 0-17.27-20.85 62 62 0 0 0-34.74-10.59h-2.93a9.21 9.21 0 0 1-8 5.54h-.31a9.13 9.13 0 0 1-.3-18.25h.33a9 9 0 0 1 8 4.89h2.61c20.8 0 39.06 7.98 51.42 22.48zm-82.75 23a7.31 7.31 0 0 1 1.14-4.73c-9.12-15.8-14-35.83-6.51-56.68C34.61 13.83 48.13 3.24 62.79 3.24c15.64 0 31.93 13.69 33.88 40.07-2.44-.81-6-2-8.14-2.44-.53-8.63-7.82-30.13-25.09-29.81-6.19.17-15.31 3.1-20 9.12a43.69 43.69 0 0 0-9.64 25.25 59.61 59.61 0 0 0 8.47 36.16 2.75 2.75 0 0 1 1.14-.16h.32a9.121 9.121 0 0 1 .33 18.24h-.33a9.16 9.16 0 0 1-9.12-8.79z"></path>
+    </svg>
+  )
+}
+
 //
 // export function IconJS() {
 // }
