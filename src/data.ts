@@ -4,17 +4,32 @@ import weatherWidgetPjImg from '../public/assets/weatherReactPj.png';
 import todoListImg from '../public/assets/todoReactPj.png';
 import diplomaPjImg from '../public/assets/diploma-pj-screenshot.png';
 import {TSkills} from "@/types";
-import IconJS from "@/components/Icon/IconJS";
-import IconSass from "@/components/Icon/IconSass";
+import {IconHTML, IconCSS, IconSass, IconJS, IconTS, IconReact,} from "@/components/Icon/Icons";
 
 export const SKILLS: TSkills[] = [
   {
-    icon: IconJS,
-    title: 'HTML/CSS'
+    icon: IconHTML,
+    title: 'HTML5'
+  },
+  {
+    icon: IconCSS,
+    title: 'CSS3'
   },
   {
     icon: IconSass,
-    title: 'HTML/CSS'
+    title: 'SCSS/SASS'
+  },
+  {
+    icon: IconJS,
+    title: 'JavaScript'
+  },
+  {
+    icon: IconTS,
+    title: 'TypeScript'
+  },
+  {
+    icon: IconReact,
+    title: 'React'
   },
   // {
   //   img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',

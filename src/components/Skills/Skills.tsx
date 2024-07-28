@@ -1,6 +1,6 @@
 import s from './Skills.module.scss';
 import {TSkills} from "@/types";
-import IconJs from "@/components/Icon/IconJS";
+import Icons from "@/components/Icon/Icons";
 
 export type Props = {
   skill: TSkills;
