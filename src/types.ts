@@ -30,3 +30,9 @@ export type TSkills = {
     icon: () => ReactElement,
     title: string
 }
+
+export type TColors = {
+    colorForLight: string,
+    colorForDark: string,
+    colorForOrange: string
+}
