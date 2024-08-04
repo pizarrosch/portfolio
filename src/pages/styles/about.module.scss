@@ -44,21 +44,23 @@
     flex-direction: column;
     gap: 50px;
     margin: 50px 0;
+    width: 100%;
 
     .wrapper {
       display: flex;
       flex-direction: column;
       gap: 25px;
+      margin-left: 400px;
     }
 
     .skillsContainer,
     .langSkillsContainer {
       display: flex;
-      width: 570px;
+      //width: 570px;
       flex-wrap: wrap;
       gap: 20px;
       row-gap: 20px;
-      justify-content: flex-start;
+      justify-content: left;
     }
   }
 

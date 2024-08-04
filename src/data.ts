@@ -4,7 +4,17 @@ import weatherWidgetPjImg from '../public/assets/weatherReactPj.png';
 import todoListImg from '../public/assets/todoReactPj.png';
 import diplomaPjImg from '../public/assets/diploma-pj-screenshot.png';
 import {TSkills} from "@/types";
-import {IconHTML, IconCSS, IconSass, IconJS, IconTS, IconReact, IconNextJS, IconRedux,} from "@/components/Icon/Icons";
+import {
+  IconHTML,
+  IconCSS,
+  IconSass,
+  IconJS,
+  IconTS,
+  IconReact,
+  IconNextJS,
+  IconRedux,
+  IconNodeJS,
+} from "@/components/Icon/Icons";
 
 export const SKILLS: TSkills[] = [
   {
@@ -38,6 +48,10 @@ export const SKILLS: TSkills[] = [
   {
     icon: IconRedux,
     title: 'Redux'
+  },
+  {
+    icon: IconNodeJS,
+    title: 'NodeJS'
   },
   // {
   //   img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
