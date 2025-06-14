@@ -31,7 +31,7 @@ export const pjItemsData = [
     title: 'Book Store',
     description: `Book store page was my first connection to NextJS. In order to add books to the cart you must log in. 
                   Just use 'shomakhov@skillfactory.ru' as login and 'Zaurskillfactory' as password`,
-    url: 'https://book-store-nextjs-j4n9voyji-pizarrosch.vercel.app/',
+    url: 'https://book-store-nextjs-sf.vercel.app/',
     githubUrl: 'https://github.com/pizarrosch/book-store-nextjs-sf'
   },
   {
