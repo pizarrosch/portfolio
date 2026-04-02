@@ -1,8 +1,15 @@
 .root {
-  font-size: 18px;
-  border: darkgray 1px solid;
-  border-radius: 8px;
-  width: fit-content;
-  padding: 10px;
-  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid var(--color-skill-border);
+  background-color: var(--color-skill-bg);
+  color: var(--color-text);
+  border-radius: 20px;
+  padding: 8px 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-shadow-strong);
+  }
 }

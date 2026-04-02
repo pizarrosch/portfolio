@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  background-color: var(--color-surface);
+  box-shadow: var(--color-shadow) 0 2px 4px 0, var(--color-shadow-strong) 0 2px 16px 0;
+  border-radius: 6px;
+  padding: 5px;
+  gap: 5px;
+  z-index: 10;
+  width: 140px;
+  text-align: center;
+}
+
+.item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 200ms ease-in-out;
+  color: var(--color-text);
+  font-size: 16px;
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-nav-active-text);
+  }
+}

@@ -7,8 +7,8 @@ export default function Layout({children}: PropsWithChildren) {
     return (
         <>
             <Head>
-                <title>My portfolio</title>
-                <meta name="description" content="SkillFactory Next.js project" />
+                <title>Zaur Shomakhov — Frontend Developer</title>
+                <meta name="description" content="Portfolio of Zaur Shomakhov, a frontend developer with professional experience in React, Angular, TypeScript and Next.js" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <Header />

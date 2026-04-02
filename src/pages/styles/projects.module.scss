@@ -1,252 +1,70 @@
-.root,
-.darkRoot {
+.root {
   display: flex;
   width: 100%;
   min-height: calc(100vh - 200px);
-  background-color: #F6F7F9;
-  gap: 100px;
+  background-color: var(--color-bg);
+  gap: 60px;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 80px 40px;
   box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
 
-  .arrowLeftActive,
-  .arrowRightActive,
-  .arrowRight,
-  .arrowRightInactive,
-  .arrowLeftInactive {
-    width: 62px;
-    height: 62px;
+.arrowActive,
+.arrowInactive {
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 200ms ease-in-out;
+  flex-shrink: 0;
+}
+
+.arrowRight {
+  transform: rotate(180deg);
+}
+
+.arrowInactive {
+  opacity: 0.2;
+}
+
+.arrowActive {
+  opacity: 0.8;
+
+  &:hover {
+    background-color: var(--color-surface-hover);
+    border-radius: 8px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .root {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 10px 60px;
   }
 
-  .arrowRight,
-  .arrowRightInactive,
-  .arrowRightActive {
+  .arrowActive,
+  .arrowInactive {
+    width: 32px;
+    height: 32px;
+  }
+
+  .arrowRight {
     transform: rotate(180deg);
   }
-
-  .arrowLeftInactive,
-  .arrowRightInactive {
-    opacity: 20%;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  .arrowLeftActive,
-  .arrowRightActive {
-    opacity: 80%;
-    cursor: pointer;
-    padding: 10px;
-    transition: 200ms ease-in-out;
-  }
-
-  .arrowLeftActive:hover,
-  .arrowRightActive:hover {
-    background-color: #e5e5e5;
-    //opacity: 60%;
-    transition: 200ms ease-in-out;
-  }
 }
 
-.darkRoot {
-  background-color: #404854;
-}
-
-@media all and (min-width: 320px) and (max-width: 425px) {
-  .root,
-  .darkRoot {
-    position: relative;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    align-items: flex-start;
-
-    .arrowLeftActive,
-    .arrowRightActive,
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowLeftInactive {
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      top: 80px;
-      z-index: 1;
-    }
-
-    .arrowLeftActive,
-    .arrowLeftInactive {
-      left: -3px;
-    }
-
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowRightActive {
-      right: 0;
-    }
+@media all and (min-width: 769px) and (max-width: 1024px) {
+  .root {
+    gap: 20px;
+    padding: 40px 20px;
   }
-}
 
-@media all and (min-width: 426px) and (max-width: 500px) {
-  .root,
-  .darkRoot {
-    position: relative;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    align-items: flex-start;
-
-    .arrowLeftActive,
-    .arrowRightActive,
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowLeftInactive {
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      top: 90px;
-      z-index: 1;
-    }
-
-    .arrowLeftActive,
-    .arrowLeftInactive {
-      left: -3px;
-    }
-
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowRightActive {
-      right: 0;
-    }
-  }
-}
-
-@media all and (min-width: 501px) and (max-width: 600px) {
-  .root,
-  .darkRoot {
-    position: relative;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    align-items: flex-start;
-
-    .arrowLeftActive,
-    .arrowRightActive,
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowLeftInactive {
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      top: 100px;
-      z-index: 1;
-    }
-
-    .arrowLeftActive,
-    .arrowLeftInactive {
-      left: -3px;
-    }
-
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowRightActive {
-      right: 0;
-    }
-  }
-}
-
-@media all and (min-width: 601px) and (max-width: 700px) {
-  .root,
-  .darkRoot {
-    position: relative;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    align-items: flex-start;
-
-    .arrowLeftActive,
-    .arrowRightActive,
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowLeftInactive {
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      top: 110px;
-      z-index: 1;
-    }
-
-    .arrowLeftActive,
-    .arrowLeftInactive {
-      left: 10px;
-    }
-
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowRightActive {
-      right: 10px;
-    }
-  }
-}
-
-@media all and (min-width: 701px) and (max-width: 800px) {
-  .root,
-  .darkRoot {
-    position: relative;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    align-items: flex-start;
-
-    .arrowLeftActive,
-    .arrowRightActive,
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowLeftInactive {
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      top: 130px;
-      z-index: 1;
-    }
-
-    .arrowLeftActive,
-    .arrowLeftInactive {
-      left: 40px;
-    }
-
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowRightActive {
-      right: 40px;
-    }
-  }
-}
-
-@media all and (min-width: 801px) and (max-width: 1023px) {
-  .root,
-  .darkRoot {
-    position: relative;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    align-items: flex-start;
-
-    .arrowLeftActive,
-    .arrowRightActive,
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowLeftInactive {
-      position: absolute;
-      width: 32px;
-      height: 32px;
-      top: 140px;
-      z-index: 1;
-    }
-
-    .arrowLeftActive,
-    .arrowLeftInactive {
-      left: 65px;
-    }
-
-    .arrowRight,
-    .arrowRightInactive,
-    .arrowRightActive {
-      right: 65px;
-    }
+  .arrowActive,
+  .arrowInactive {
+    width: 40px;
+    height: 40px;
   }
 }

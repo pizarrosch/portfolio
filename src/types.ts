@@ -14,7 +14,7 @@ export type TProject = {
 }
 
 export type TTheme = {
-    theme: string
+    theme: 'light' | 'dark'
 }
 
 export type TDropdown = {
@@ -22,6 +22,4 @@ export type TDropdown = {
     setIsDropdownVisible: Dispatch<SetStateAction<boolean>>,
     IsMobileMenuVisible: boolean,
     setIsMobileMenuVisible: Dispatch<SetStateAction<boolean>>,
-    leftOffset: number,
-    topOffset: number
 }

@@ -1,6 +1,5 @@
-.root,
-.darkRoot {
-  background-color: #eeeeee;
+.root {
+  background-color: var(--color-bg-header);
   width: 100%;
   height: 100px;
   display: flex;
@@ -8,10 +7,9 @@
   justify-content: flex-end;
   padding-right: 80px;
   box-sizing: border-box;
+  transition: background-color 0.2s ease;
 
-  .listMenu,
-  .listMenuDark,
-  .listMenuHelloween {
+  .listMenu {
     display: none;
   }
 
@@ -22,88 +20,38 @@
     align-items: center;
     width: 400px;
 
-    .menu,
-    .darkMenu,
-    .darkHelloweenMenu,
-    .menuChosen,
-    .darkMenuChosen,
-    .darkHelloweenMenuChosen
-    {
+    .menu {
       cursor: pointer;
       transition: 200ms ease-in-out;
       padding: 15px;
       box-sizing: border-box;
       border-radius: 5px;
+
+      &:hover {
+        background-color: var(--color-primary-hover);
+        color: var(--color-nav-active-text);
+      }
     }
 
     .menuChosen {
-      background-color: #6909a3;
-      color: floralwhite;
+      background-color: var(--color-nav-active-bg);
+      color: var(--color-nav-active-text);
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
-
-    .darkMenuChosen {
-      background-color: #DCE0E5;
-      color: #252A31;
-    }
-
-    .darkHelloweenMenuChosen {
-      background-color: #FF9980;
-      color: #252A31;
-    }
-
-    .menuChosen:hover,
-    .darkMenuChosen:hover,
-    .darkHelloweenMenuChosen:hover {
-      opacity: 0.7;
-    }
-  }
-
-  .menu:hover,
-  .darkMenu:hover,
-  .darkHelloweenMenu:hover {
-    background-color: #9c83ab;
-    transition: 200ms ease-in-out;
-    box-sizing: border-box;
-  }
-
-  .menu:hover {
-    color: floralwhite;
-  }
-
-  .darkMenu:hover {
-    background-color: #868686;
-    color: #252A31;
-  }
-
-  .darkHelloweenMenu:hover {
-    background-color: #e1aa9d;
-    color: #252A31;
   }
 }
 
-.darkRoot {
-  background-color: #383E47;
-  color: #DCE0E5;
-}
-
-@media all and (min-width: 320px) and (max-width: 1023px) {
-  .root,
-  .darkRoot {
+@media all and (max-width: 1023px) {
+  .root {
     justify-content: flex-start;
 
-    .listMenu,
-    .listMenuDark,
-    .listMenuHelloween {
+    .listMenu {
       display: block;
       margin-left: 30px;
-    }
-
-    .listMenuDark {
-      background-color: #EDEFF2;
-    }
-
-    .listMenuHelloween {
-      background-color: #EB6847;
+      cursor: pointer;
     }
 
     .navigation {

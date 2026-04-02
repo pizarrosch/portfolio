@@ -1,9 +1,5 @@
-.root,
-.darkRoot,
-.homeRoot,
-.darkHomeRoot
-{
-  background-color: #eeeeee;
+.root {
+  background-color: var(--color-bg-header);
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -12,111 +8,84 @@
   justify-content: flex-end;
   padding-right: 80px;
   width: 100%;
-
-  .switcherContainer {
-    display: flex;
-    align-items: center;
-    width: 250px;
-    gap: 10px;
-    padding-left: 30px;
-    box-sizing: border-box;
-    }
-
-  .image,
-  .x_ixon,
-  {
-    height: 32px;
-    width: 32px;
-    position: relative;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-  }
-
-  .imageBackdropGithub,
-  .imageBackdropLinkedIn,
-  .imageBackdropFacebook,
-  .imageBackdropInstagram {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    background-color: #F6F7F9;
-    border-radius: 50%;
-  }
-
-  .iconsContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-
-    .githubIconWrapper {
-      position: relative;
-
-      .imageBackdropGithub {
-        position: absolute;
-        right: 1px;
-        bottom: 5px;
-      }
-    }
-
-    .linkedInIconWrapper {
-      position: relative;
-
-      .imageBackdropLinkedIn {
-        position: absolute;
-        right: 1px;
-        bottom: 5px;
-      }
-    }
-
-    .facebookIconWrapper {
-      position: relative;
-
-      .imageBackdropFacebook {
-        position: absolute;
-        right: 1px;
-        bottom: 5px;
-      }
-    }
-
-    .instagramIconWrapper {
-      position: relative;
-
-      .imageBackdropInstagram {
-        position: absolute;
-        right: 1px;
-        bottom: 5px;
-      }
-    }
-
-    .x_ixon {
-      background-color: black;
-      border-radius: 50%;
-      box-sizing: border-box;
-      padding: 6px;
-    }
-  }
+  transition: background-color 0.2s ease;
 }
 
-.homeRoot,
-.darkHomeRoot
-{
+.homeRoot {
   justify-content: space-between;
   padding: 0 80px 0 30px;
 }
 
-.darkRoot,
-.darkHomeRoot
-{
-  background-color: #383E47;
-  color: #DCE0E5;
+.switcherContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 30px;
 }
 
-@media all and (min-width: 320px) and (max-width: 1023px) {
-  .root,
-  .darkRoot {
+.switchLabel {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.toggle {
+  width: 48px;
+  height: 26px;
+  border-radius: 13px;
+  border: none;
+  background-color: var(--color-toggle-track);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+  padding: 0;
+}
+
+.toggleActive {
+  background-color: var(--color-toggle-active);
+}
+
+.toggleHandle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-toggle-handle);
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  .toggleActive & {
+    transform: translateX(22px);
+  }
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.xIcon {
+  background-color: black;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+@media all and (max-width: 1023px) {
+  .root {
     justify-content: center;
     padding-right: 0;
 
@@ -125,4 +94,3 @@
     }
   }
 }
-

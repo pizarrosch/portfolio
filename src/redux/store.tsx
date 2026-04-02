@@ -13,9 +13,6 @@ import storage from 'redux-persist/lib/storage';
 import {activateAnimationSlice} from "@/redux/slices/activateAnimationSlice";
 import {themeSlice} from "@/redux/slices/themeSlice";
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
-
 const reducer = combineReducers({
     activationsStatus: activateAnimationSlice.reducer,
     theme: themeSlice.reducer
@@ -34,10 +31,12 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
-                // @ts-ignore
-                ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
             }
         })
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
 export const persistor = persistStore(store)

@@ -5,13 +5,9 @@ import leftArrow from '../../public/assets/arrow-left-3099.svg';
 import Image from "next/image";
 import {pjItemsData} from "@/data";
 import React, {useState} from "react";
-import {useAppSelector} from "@/hooks/hooks";
-import {RootState} from "@/redux/store";
 
 export default function Projects() {
-
   const [slideIndex, setSlideIndex] = useState(0);
-  const actualTheme = useAppSelector((state: RootState) => state.theme);
 
   function onRightClick() {
     if (slideIndex === pjItemsData.length - 1) return;
@@ -25,13 +21,14 @@ export default function Projects() {
 
   return (
     <Layout>
-      <div className={actualTheme.theme === 'light' ? s.root : s.darkRoot}>
-        <Image src={leftArrow} alt='' className={slideIndex > 0 ? s.arrowLeftActive : s.arrowLeftInactive}
+      <div className={s.root}>
+        <Image src={leftArrow} alt='Previous' className={slideIndex > 0 ? s.arrowActive : s.arrowInactive}
                onClick={onLeftClick}/>
         <ProjectItem src={pjItemsData[slideIndex].src} title={pjItemsData[slideIndex].title}
-                     description={pjItemsData[slideIndex].description} url={pjItemsData[slideIndex].url} gitHubUrl={pjItemsData[slideIndex].githubUrl}/>
-        <Image src={leftArrow} alt=''
-               className={slideIndex === pjItemsData.length - 1 ? s.arrowRightInactive : s.arrowRightActive}
+                     description={pjItemsData[slideIndex].description} url={pjItemsData[slideIndex].url}
+                     gitHubUrl={pjItemsData[slideIndex].githubUrl}/>
+        <Image src={leftArrow} alt='Next'
+               className={`${s.arrowRight} ${slideIndex === pjItemsData.length - 1 ? s.arrowInactive : s.arrowActive}`}
                onClick={onRightClick}/>
       </div>
     </Layout>
