@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/zaur/www/portfolio -maxdepth 2 -name *.json -o -name *.config.* -o -name .env*)",
+      "Bash(find /Users/zaur/fs-projects/hero-ui/projects/admin/src/app/view -name \"*.component.ts\" -exec wc -l {})",
+      "Bash(npm run:*)",
+      "Bash(source ~/.nvm/nvm.sh)",
+      "Bash(nvm use:*)",
+      "Bash(nvm ls:*)",
+      "Bash(npm uninstall:*)"
+    ]
+  }
+}
