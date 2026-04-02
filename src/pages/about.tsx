@@ -24,16 +24,18 @@ export default function About() {
             }>About me</span>
             <article className={s.article}>
               <p>
-                My name is Zaur. I am a chemist who one day wanted to change his profession to that of a frontend
-                developer and realized one day he will stay a programmer for life.
+                I&#39;m a frontend developer with a background in chemistry. After completing an intensive 14-month
+                training program, I transitioned into tech and have been working professionally as a developer
+                for over half a year.
               </p>
               <p>
-                After having successfully finished a 14 months online course, including a lot of projects and assisted
-                by experienced mentors, I am ready to step into the professional life and start to develop my skills and
-                contribute to the success of a new family I will work with.
+                In my current role, I build and maintain an enterprise HR management platform — working with
+                Angular, TypeScript, MySQL, and Docker. The application handles complex data models,
+                reactive forms, and integration with multiple external systems.
               </p>
               <p>
-                Feel free to click on the Projects button on the navigation menu to look into some of my projects.
+                Beyond my professional work, I continue to build projects with React, Next.js, and TypeScript.
+                Check out some of them on the Projects page.
               </p>
             </article>
           </div>
