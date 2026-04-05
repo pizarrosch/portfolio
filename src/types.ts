@@ -9,6 +9,7 @@ export type TProject = {
     src: StaticImageData,
     title: string,
     description: string,
+    tech: string[],
     url?: string,
     gitHubUrl?: string
 }

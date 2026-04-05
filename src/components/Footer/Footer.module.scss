@@ -1,96 +1,62 @@
-.root {
-  background-color: var(--color-bg-header);
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  gap: 25px;
-  height: 100px;
-  justify-content: flex-end;
-  padding-right: 80px;
-  width: 100%;
-  transition: background-color 0.2s ease;
+.footer {
+  background-color: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  padding: 28px 48px;
+  transition: background-color 0.3s ease;
 }
 
-.homeRoot {
+.inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 80px 0 30px;
+  gap: 24px;
 }
 
-.switcherContainer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-left: 30px;
-}
-
-.switchLabel {
-  font-size: 14px;
+.copy,
+.built {
+  font-size: 13px;
   color: var(--color-text-secondary);
+  font-weight: 500;
 }
 
-.toggle {
-  width: 48px;
-  height: 26px;
-  border-radius: 13px;
-  border: none;
-  background-color: var(--color-toggle-track);
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.2s ease;
-  padding: 0;
-}
-
-.toggleActive {
-  background-color: var(--color-toggle-active);
-}
-
-.toggleHandle {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--color-toggle-handle);
-  transition: transform 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-
-  .toggleActive & {
-    transform: translateX(22px);
-  }
-}
-
-.iconsContainer {
+.socials {
   display: flex;
-  gap: 20px;
+  gap: 8px;
   align-items: center;
 }
 
-.icon {
-  height: 32px;
-  width: 32px;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
 
   &:hover {
-    opacity: 1;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
     transform: translateY(-2px);
   }
 }
 
-.xIcon {
-  background-color: black;
-  border-radius: 50%;
-  padding: 6px;
-}
+@media (max-width: 600px) {
+  .footer {
+    padding: 24px;
+  }
 
-@media all and (max-width: 1023px) {
-  .root {
-    justify-content: center;
-    padding-right: 0;
+  .inner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
 
-    .switcherContainer {
-      display: none;
-    }
+  .built {
+    display: none;
   }
 }

@@ -1,40 +1,131 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Portfolio (Next.js + TypeScript)
+================================
 
-## Getting Started
+Overview
+--------
+Personal portfolio website built with Next.js (Pages Router) and TypeScript. It showcases projects, skills, and an about page. The app uses Redux Toolkit with redux-persist to store UI state (e.g., theme), Ant Design components, and animated particles via tsparticles.
 
-First, run the development server:
+- Language: TypeScript (React)
+- Framework: Next.js 16 (Pages Router)
+- State: Redux Toolkit + redux-persist
+- UI: Ant Design
+- Graphics/Particles: tsparticles
+- Styles: CSS/SASS/SCSS
+
+Requirements
+------------
+- Node.js: 18+ (recommended 18 LTS or 20). TODO: Confirm the exact supported Node range for this project.
+- npm is the default package manager (repository contains `package-lock.json`).
+
+Getting Started (Local Development)
+-----------------------------------
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Build and Run (Production)
+--------------------------
+- Build:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Start the production server (after building):
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm start
+```
 
-## Learn More
+Available Scripts
+-----------------
+- `npm run dev` — Start Next.js in development mode.
+- `npm run build` — Build the app for production.
+- `npm start` — Start the production server.
+- `npm run lint` — Run ESLint using Next.js config.
 
-To learn more about Next.js, take a look at the following resources:
+Environment Variables
+---------------------
+No environment variables are required for local development by default. TODO: If future features (analytics, API keys, etc.) are added, document them here in a table with names, defaults, and descriptions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Project Structure
+-----------------
+A non-exhaustive outline of the main folders/files:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+.
+├── CNAME
+├── LICENSE.md
+├── README.md
+├── next.config.js              # Next.js configuration
+├── package.json                # Scripts and dependencies
+├── package-lock.json           # npm lockfile
+├── public/                     # Static assets (images, icons, etc.)
+├── src/
+│   ├── Layout/
+│   │   └── Layout.tsx          # Shared page layout (Head, Header, Footer)
+│   ├── components/             # UI components (Header, Footer, Main, ProjectItem, etc.)
+│   ├── hooks/
+│   │   └── hooks.ts            # Typed Redux hooks
+│   ├── redux/
+│   │   ├── slices/             # Redux Toolkit slices (theme, animations)
+│   │   └── store.tsx           # Store configuration + redux-persist
+│   ├── pages/                  # Next.js Pages Router
+│   │   ├── _app.tsx            # App entry: wraps pages with Providers
+│   │   ├── index.tsx           # Home page (Main component)
+│   │   ├── about.tsx           # About page
+│   │   └── projects.tsx        # Projects page (carousel)
+│   ├── pages/styles/           # SCSS modules for pages
+│   ├── data.ts                 # Skills and projects data
+│   ├── types.ts                # Shared TypeScript types
+│   └── styles/                 # Global styles (e.g., globals.css)
+├── tsconfig.json
+└── particlesjs-config.json     # Particles configuration
+```
 
-## Deploy on Vercel
+Entry Points
+------------
+- Application wrapper: `src/pages/_app.tsx` (provides Redux store and persistence gate).
+- Pages: `src/pages/index.tsx`, `src/pages/about.tsx`, `src/pages/projects.tsx`.
+- Layout: `src/Layout/Layout.tsx` (sets `<Head>`, header, footer, and main content area).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Testing
+-------
+There are currently no automated tests in this repository. TODO: Add unit/component tests (e.g., Jest + React Testing Library) and/or E2E tests (e.g., Cypress or Playwright). When tests exist, document how to run them here.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Linting/Formatting
+------------------
+- Run ESLint:
+
+```bash
+npm run lint
+```
+
+Deployment
+----------
+This project can be deployed to any Node-capable host. The simplest path is Vercel:
+- Vercel: https://vercel.com — connect the repo, set framework to Next.js, and deploy. See Next.js deployment docs: https://nextjs.org/docs/deployment
+
+Notes
+-----
+- This project uses the Next.js Pages Router (folder `src/pages`).
+- Redux state (e.g., theme) is persisted across sessions using `redux-persist`.
+- Ant Design components and tsparticles are used for UI/visual effects.
+
+License
+-------
+See `LICENSE.md` (MIT). The license file currently credits Vincent Garreau; ensure this reflects your intended licensing for the whole repository. TODO: Confirm or update license attribution if needed.
+
+Changelog / Roadmap
+-------------------
+TODO: Maintain a CHANGELOG and outline planned enhancements (e.g., add tests, CI, analytics, SEO improvements, dark/light themes tuning).
