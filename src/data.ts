@@ -1,8 +1,6 @@
-import bookStorePj from '../public/assets/bookStoreNextJsPj.png';
+import bookStorePj from '../public/assets/book-store.png';
 import kanbanPjImg from '../public/assets/kanban-board.png';
 import weatherWidgetPjImg from '../public/assets/weatherReactPj.png';
-import todoListImg from '../public/assets/todoReactPj.png';
-import diplomaPjImg from '../public/assets/diploma-pj-screenshot.png';
 
 export const SKILLS = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Angular', 'HTML/CSS', 'SASS/SCSS', 'Node.js', 'Express', 'Redux', 'MySQL', 'Docker', 'Git', 'REST APIs', 'Webpack', 'Cypress', 'Jest', 'Linux', 'Bash', 'npm'];
 
