@@ -5,19 +5,39 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 export default function Contact() {
   const { ref, isVisible } = useScrollReveal();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.open(`mailto:zaur.shomakhov@gmail.com?subject=${subject}&body=${body}`);
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
+    if (!form.name || !form.email || !form.message) return;
+    setStatus('sending');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setStatus('sent');
+        setForm({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        const data = await res.json();
+        console.error('Contact form error:', data.error);
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (err) {
+      console.error('Contact form fetch error:', err);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   }
 
   return (
@@ -56,7 +76,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form className={s.form} onSubmit={handleSubmit} noValidate>
+        <form className={s.form} onSubmit={handleSubmit}>
           <div className={s.row}>
             <div className={s.field}>
               <label className={s.label} htmlFor="name">Name</label>
@@ -100,13 +120,22 @@ export default function Contact() {
             />
           </div>
 
-          <button type="submit" className={`${s.submitBtn} ${sent ? s.sent : ''}`}>
-            {sent ? 'Opening your email client...' : 'Send Message'}
-            {!sent && (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18" aria-hidden="true">
-                <line x1="22" y1="2" x2="11" y2="13"/>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
+          <button
+            type="submit"
+            className={`${s.submitBtn} ${status === 'sent' ? s.sent : ''} ${status === 'error' ? s.error : ''}`}
+            disabled={status === 'sending'}
+          >
+            {status === 'sending' && 'Sending...'}
+            {status === 'sent' && 'Message sent!'}
+            {status === 'error' && 'Failed to send. Try again.'}
+            {status === 'idle' && (
+              <>
+                Send Message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </>
             )}
           </button>
         </form>
