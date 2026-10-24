@@ -12,6 +12,11 @@ export type TProject = {
     gitHubUrl?: string
 }
 
+export type TButton = {
+    text: string,
+    // onClick: () => void
+}
+
 export type TTheme = {
     theme: 'light' | 'dark'
 }
