@@ -11,6 +11,9 @@
 
   .listMenu {
     display: none;
+    padding: 0;
+    border: none;
+    background: none;
   }
 
   .navigation {
@@ -49,7 +52,7 @@
     justify-content: flex-start;
 
     .listMenu {
-      display: block;
+      display: flex;
       margin-left: 30px;
       cursor: pointer;
     }

@@ -11,11 +11,13 @@ export default function ThemeMenuButton() {
   const dispatch = useAppDispatch();
 
   return (
-    <Image
-      src={theme === 'dark' ? moon : sun}
-      alt={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+    <button
+      type='button'
+      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
       onClick={() => dispatch(toggleTheme())}
       className={s.root}
-    />
+    >
+      <Image src={theme === 'dark' ? moon : sun} alt='' className={s.icon}/>
+    </button>
   )
 }

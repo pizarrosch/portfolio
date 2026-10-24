@@ -17,7 +17,15 @@ export default function Header() {
 
   return (
     <div className={s.root}>
-      <Image src={listMenu} alt='menu' className={s.listMenu} onClick={toggleMobileMenuIsVisible}/>
+      <button
+        type='button'
+        aria-label='Toggle menu'
+        aria-expanded={mobileMenuIsVisible}
+        className={s.listMenu}
+        onClick={toggleMobileMenuIsVisible}
+      >
+        <Image src={listMenu} alt=''/>
+      </button>
       <DropdownMobile isDropdownVisible={mobileMenuIsVisible} onClose={() => setMobileMenuIsVisible(false)}/>
       <nav className={s.navigation}>
         <Link href='/'>
