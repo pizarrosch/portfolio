@@ -14,6 +14,8 @@ export type TProject = {
 
 export type TButton = {
     text: string,
+    link?: string,
+    isActive: boolean,
     // onClick: () => void
 }
 

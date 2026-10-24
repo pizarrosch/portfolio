@@ -1,5 +1,4 @@
 import React from 'react';
-import {AntDesignOutlined} from '@ant-design/icons';
 import {Button as AntButton, ConfigProvider, Space} from 'antd';
 import {createStyles} from 'antd-style';
 import {TButton} from "@/types";
@@ -30,7 +29,7 @@ const useStyle = createStyles(({cssVar, prefixCls, css}) => ({
     `,
 }));
 
-export default function Button({text}: TButton) {
+export default function Button({text, link, isActive}: TButton) {
     const {styles} = useStyle();
     const theme = useAppSelector((state: RootState) => state.theme.theme);
 
@@ -40,7 +39,11 @@ export default function Button({text}: TButton) {
                 className: styles.linearGradientButton,
             }}
         >
-            <AntButton type={theme === 'light' ? "primary" : "default"} size="large">
+            <AntButton
+                type={theme === 'light' ? "primary" : "default"}
+                href={link}
+                color={isActive ? "cyan" : "default" }
+                size="large">
                 {text}
             </AntButton>
         </ConfigProvider>
