@@ -2,7 +2,7 @@ import s from './Footer.module.scss';
 import Image from "next/image";
 import linkedIn from '../../../public/assets/black_icons/linkedin.svg';
 import gitHub from '../../../public/assets/black_icons/github.svg';
-import X from '../../../public/assets/black_icons/social-icon-white-x.svg';
+import X from '../../../public/assets/black_icons/x.svg';
 import facebook from '../../../public/assets/black_icons/facebook.svg';
 import instagram from '../../../public/assets/black_icons/instagram.svg';
 import Link from "next/link";
@@ -38,7 +38,7 @@ export default function Footer() {
           <Image className={s.icon} src={gitHub} alt='GitHub'/>
         </Link>
         <Link href='https://twitter.com/zshomakhov' title='X' target='_blank'>
-          <Image className={`${s.icon} ${s.xIcon}`} src={X} alt='X'/>
+          <Image className={s.icon} src={X} alt='X'/>
         </Link>
         <Link href='https://www.linkedin.com/in/zaur-shomakhov-13a106122/' title='LinkedIn' target='_blank'>
           <Image className={s.icon} src={linkedIn} alt='LinkedIn'/>
