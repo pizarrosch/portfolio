@@ -10,9 +10,11 @@ import {
     REGISTER
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import {activateAnimationSlice} from "@/redux/slices/activateAnimationSlice";
 import {themeSlice} from "@/redux/slices/themeSlice";
 
 const reducer = combineReducers({
+    activationsStatus: activateAnimationSlice.reducer,
     theme: themeSlice.reducer
 })
 
