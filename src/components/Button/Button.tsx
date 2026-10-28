@@ -1,9 +1,8 @@
 import React from 'react';
-import {Button as AntButton, ConfigProvider, Space} from 'antd';
+import {Button as AntButton, ConfigProvider} from 'antd';
 import {createStyles} from 'antd-style';
+import {useRouter} from "next/router";
 import {TButton} from "@/types";
-import {useAppSelector} from "@/hooks/hooks";
-import {RootState} from "@/redux/store";
 
 const useStyle = createStyles(({cssVar, prefixCls, css}) => ({
     linearGradientButton: css`
@@ -31,7 +30,14 @@ const useStyle = createStyles(({cssVar, prefixCls, css}) => ({
 
 export default function Button({text, link, isActive}: TButton) {
     const {styles} = useStyle();
-    const theme = useAppSelector((state: RootState) => state.theme.theme);
+    const router = useRouter();
+
+    // Navigate client-side, but let modified clicks (new tab/window) behave like a normal link
+    function handleClick(e: React.MouseEvent<HTMLElement>) {
+        if (!link || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        router.push(link);
+    }
 
     return (
         <ConfigProvider
@@ -40,9 +46,10 @@ export default function Button({text, link, isActive}: TButton) {
             }}
         >
             <AntButton
-                type={theme === 'light' ? "primary" : "default"}
+                type={isActive ? "primary" : "default"}
                 href={link}
-                color={isActive ? "cyan" : "default" }
+                onClick={handleClick}
+                aria-current={isActive ? "page" : undefined}
                 size="large">
                 {text}
             </AntButton>
